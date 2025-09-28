@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table {
+            background-color: blanchedalmond;
+            width: 60%;
+            border-collapse: collapse;
+        }
+        th {
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue;">Belajar table dihtml</h1>
+    <hr>
+    <table class="t" border="1" style=" background-color: seashell;">
+        <tr style="color: brown;">
+        <td>NO</td>
+        <td>NAMA</td>
+        <td>ASAL</td>
+        <tr>
+            <td>1</td>
+            <td>Abdullah</td>
+            <td>Jogja</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Dika</td>
+            <td>Lampung Timur</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>faiz</td>
+            <td>Bekasi</td>
+        </tr>
+    </table>
+    <h1>Daftar belanja:</h1>
+    <table border="1" style="width: 50%; background-color:beige;">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Barang</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Es teh</td>
+                <td> RP 2.500,-</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>Total Pengeluaran</td>
+                <td>RP 32.500,</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h1 style="color: blue;">jadwal piket</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">no</th>
+                <th colspan="7">jadwal Piket Pekanan</th>
+            </tr>
+            <!-- hilangkan th yg diawal karena sdh ada rowspan -->
+            <tr>
+                <th>senin</th>
+                <th>selasa</th>
+                <th>rabu</th>
+                <th>kamis</th>
+                <th>jum'at</th>
+                <th>sabtu</th>
+                <th>ahad</th>
+            </tr><tr>
+                <th>1</th>
+                <td>Abdullah</td>
+                <td>Dika</td>
+                <td>Faiz</td>
+                <td>Zidane</td>
+                <td>Abdulhakim</td>
+                <td>Harun</td>
+                <td>Azzam</td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

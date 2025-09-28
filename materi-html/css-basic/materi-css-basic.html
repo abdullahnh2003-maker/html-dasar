@@ -1,0 +1,126 @@
+<!-- shortcut html:5 =membuat struktur dasar html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* id => dengan simbol pagar(#) */
+      #box1 {
+        background-color: lightblue;
+        margin: 50px;
+        width: 600px;
+        height: 800px;
+      }
+      #box2 {
+        background-color: skyblue;
+        width: 8cm;
+        height: 80px;
+        margin: 50px;
+        scrollbar-darkshadow-color: black;
+      }
+      #box3 {
+                background-color: aqua;
+        color: brown;
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        margin: 50px;
+        border: 4px solid bisque;
+      }
+      #h1 {
+        color: #8cf05e;
+        margin: 20px;
+      }
+      .tanggal {
+        color: rgb(235, 135, 172);
+         margin: 20px;
+      }
+      #box1 h1 {
+        color: blueviolet;
+        margin: 50px;
+      }
+      h3{
+        color: blueviolet;
+        margin: 50px;
+        text-align: center;
+      }
+      a {
+        margin: 50px;
+    }
+    #oe {
+       margin: 50px; 
+       color: palevioletred;
+    }
+    #saya {
+      width: 340px;
+      margin: 50px;
+      transition: all 0.5s ease; 
+      background-color: aqua;color-scheme: blue;
+    }
+      a {
+    text-decoration: none; /* hilangkan garis bawah */
+    color: blue; /* atur warna link */
+  }
+  a:hover {
+    text-decoration: underline; /* garis bawah muncul saat hover (opsional) */
+  }
+  .div {
+    background-color: aqua;
+    height: 50px;
+    width:5cm ;
+    margin: 50px;
+  }
+      </style>
+    </head>
+  <body>
+    <div id="box1">
+      <h1>belajar attribute html</h1>
+      <h3>github saya:</h3>
+      <!-- target="blank membuka link tab baru" -->
+      <p>
+        <b><a href="https://github.com/abdullahnh2003-maker" target="_blank">open github</a></b></p>
+      <br />
+      <!-- heigt:set tingi gambar -->
+      <!-- alt alternative text :keterangan gambar -->
+
+      <img style="margin: 50px ;"
+        height="500;"
+        alt="gambar demon slayer"
+        src="https://demonslayer-hinokami.sega.com/img/purchase/digital-standard.jpg"
+        />
+    </div>
+    <div id="box2">
+      <h1 id="h1">saya org ganteng</h1>
+      <h3 class="tanggal">tapi bohong</h3>
+    </div>
+    <div id="box3">
+      <h3 style="text-align: center">profile saya</h3>
+      <p><b>nama:</b> abdullah</p>
+      <p><b>umur:</b> 15 lahir 2010</p>
+    </div>
+    <div id="saya">
+        <h3>hobi:</h3>
+        <ul type="square">
+            <li>bola(semua)</li>
+            <li>berenang</li>
+        </ul>
+        <h3>makanan:</h3>
+        <ol>
+            <li>ayam</li>
+            <li>ikan</li>
+            <li>daging</li>
+        </ol>
+        <h3>minuman:</h3>
+        <ol type="I">
+            <li>es buah</li>
+            <li>es teh & jeruk</li>
+        </ol>
+    </div>
+    <div class="div">
+      <b><a href="../profile.html" class="kedip;">pofile saya</a></b>
+
+    </div> 
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>materi-form</title>
+    
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+>
+
+</head>
+<body>
+    
+    <main class="container">
+    <form>
+    <div">
+        <!-- input : kolom imput serbaguna -->
+         <label for="namaLengkap">Nama Lengkap</label>
+         <input type="text" name="nama_lengkap" id="namaLengkap"/>
+    </div>
+    <div>
+        <!-- input : kolom imput serbaguna -->
+         <label for="Umur">Umur</label>
+         <input type="number" name="Umur" id="Umur"/>
+    </div>
+    <div>
+        <!-- input : kolom imput serbaguna -->
+         <label for="tgl_lahir">tgl lahir</label>
+         <input type="date" name="tgl_lahir" id="tgl_lahir"/>
+    </div>
+    <div>
+        <!-- input : kolom imput serbaguna -->
+         <label for="alamat_email">alamat email</label>
+         <input type="email" name="email" id="alamat_email"/>
+    </div>
+    <div>
+        <!-- input : kolom imput serbaguna -->
+         <label for="password">password</label>
+         <input type="password" name="password" id="password"/>
+    </div>
+    <div>
+        <!-- input : kolom imput serbaguna -->
+         <label >jenis kelamin</label>
+         <input type="radio" name="jenis_kelamin" id="laki-laki"/>
+         <label for="laki-laki">laki-laki</label>
+         <input type="radio" name="jenis_kelamin" id="perempuan"/>
+         <label for="perempuan">perempuan</label>
+    </div>
+    <div>
+        <!-- input : kolom imput serbaguna -->
+         <label >Minat bahasa</label>
+         <input type="checkbox" name="Minat" id="arab"/>
+         <label for="arab">Arabic</label>
+         <input type="checkbox" name="Minat" id="inggris"/>
+         <label for="inggris">English</label>
+         <input type="checkbox" name="Minat" id="jepang"/>
+         <label for="jepang">japanese</label>
+    </div>
+    <div>
+        <label>asal daerah</label>
+        <label for="jepang">japanese</label>
+    </div>
+    <br>
+    <!-- action button -->
+     <!-- tiips shortcut : button :[type-nya] -->
+    <div class="grid">
+        <button type="reset">batal</button>
+        <button type="submit" >simpan</button>
+    </div>
+    </form>
+    </main>
+</body>
+</html>
