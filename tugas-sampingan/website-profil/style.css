@@ -1,0 +1,146 @@
+body,
+.body {
+  margin-inline: 280px;
+  background-color: white;
+}
+
+header,
+.header {
+  background: white;
+  color: rgb(2, 14, 233);
+  padding: 15px;
+  text-align: center;
+}
+h2,
+.header h2 {
+  color: #a9a9a9;
+  text-align: center;
+}
+
+nav,
+.nav {
+  margin-top: 10px;
+  background: white;
+  padding: 10px;
+}
+
+nav a,
+.nav a {
+  color: rgb(6, 34, 245);
+  text-decoration: none; /* menghilangkan garis bawah teks/link */
+  border-radius: 22px; /* menghaluskan sudut*/
+  background: white;
+  padding: 6px 14px; /* 6px jarak atas & bawah */
+  margin-right: 8px; /* jarak luar samping antar elemen */
+  border: 2px solid #e5e7eb;
+}
+
+section,
+.section {
+  background: #fdfefe;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+}
+
+.active {
+  background: blue;
+  color: white;
+}
+
+.h {
+  border-left: 4px solid #22c55e;
+  padding-left: 10px;
+}
+
+.imgfoto {
+  width: 190px; /* atau 250px sesuai kebutuhan */
+  height: 190px; /* samakan dengan width untuk bulat sempurna */
+  object-fit: cover; /* isi area tanpa distorsi */
+  border-radius: 100%;
+}
+
+.imglogo {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+}
+
+footer,
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.galery {
+  text-align: center;
+}
+
+.galery .card {
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.galery .card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+.galery .card figcaption {
+  font-size: 14px;
+  color: white;
+  background-color: burlywood;
+  margin-top: -8px;
+  padding: 4px;
+}
+
+iframe,
+.iframe {
+  border-radius: 8px;
+}
+
+table,
+.table {
+  background-color: blue;
+  color: white;
+  width: 30%;
+  text-align: center;
+  padding: 0px;
+  margin: 10px;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+tbody td {
+  background-color: #fdfefe;
+  color: #333;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+}
+
+label,
+.label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}

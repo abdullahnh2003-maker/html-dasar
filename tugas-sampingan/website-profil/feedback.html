@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Formulir Umpan Balik</h1>
+      <h2>Kritik, Saran, dan Masukan</h2>
+      <hr />
+      <nav>
+        <a href="index.html">beranda</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="jadwal.html">jadwal</a>
+        <a href="galeri.html">Galeri</a>
+        <a class="active" href="feedback.html">Feedback</a>
+      </nav>
+      <hr />
+    </header>
+    <br />
+    <main>
+      <section>
+        <h3 class="h">Formulir Kontak & Saran</h3>
+        <p>
+          Berikan masukan terbaik anda untuk pengembangan website provil ini.
+          semua input bersifat wajib kecuali nama.
+        </p>
+        <nav>
+          <label for="namaLengkap">Nama Anda (Opsional):</label>
+          <input
+            type="text"
+            name="namaLengkap"
+            id="nama"
+            placeholder="Tulis nama Anda"
+          />
+        </nav>
+        <nav>
+          <label for="alamat_email :">alamat email</label>
+          <input
+            type="email"
+            name="email"
+            id="alamat_email"
+            placeholder="nama@email.com"
+          />
+        </nav>
+        <nav>
+          <label for="masukkan angka 1-10 :"
+            >Ranting Kepuasan Website (Skala 1-10)</label
+          >
+          <input
+            type="number"
+            id="rating"
+            min="1"
+            max="10"
+            placeholder="1-10"
+            required
+          />
+        </nav>
+        <nav>
+          <h4>Rekomendasi Website Ini</h4>
+          <input type="radio" name="ya, sangat" id="Ya, sangat" />
+          <label for="Ya, Sangat" style="display: inline">Ya, sangat</label>
+          <input type="radio" name="Mungkin Saja" id="Mungkin Saja" />
+          <label for="Mungkin Saja" style="display: inline">Mungkin Saja</label>
+          <input type="radio" name="Tidak" id="Tidak" />
+          <label for="Tidak" style="display: inline">Tidak</label>
+        </nav>
+        <nav>
+          <h4>Topik yang Paling Menarik:</h4>
+          <input type="checkbox" name="Topik" id="Biodata" />
+          <label for="Galeri" style="display: inline">biodata </label>
+          <input type="checkbox" name="Topik" id="Jadwal" />
+          <label for="Galeri" style="display: inline">Jadwal</label>
+          <input type="checkbox" name="Topik" id="Galeri" />
+          <label for="Galeri" style="display: inline">Galeri</label>
+        </nav>
+        <nav>
+          <label for="bidang">Saran Pengembangan di Bidang:</label>
+          <select id="bidang" required>
+            <option value="">-- Pilih Bidang --</option>
+            <option>Desain</option>
+            <option>Konten</option>
+            <option>Fitur</option>
+            <option>Kinerja</option>
+          </select>
+        </nav>
+        <nav>
+          <label for="note">Pesan/Saran Lengkap:</label>
+          <textarea
+            name="note"
+            id="note"
+            placeholder="Tulis Pesan Dan Saran Anda Secara detail di sini..."
+          ></textarea>
+        </nav>
+        <nav class="grid">
+          <button type="reset">Batal</button>
+          <button type="submit">Simpan</button>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>

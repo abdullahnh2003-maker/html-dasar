@@ -22,13 +22,13 @@
 }
 
 .h2 {
-    border-left: 4px solid #22c55e;
+    border-left: 4px solid #22c55e; 
       padding-left: 20px;      /* ruang agar teks tidak mepet garis */
     
 }
 
 .div0 {
-  margin-inline: 300px;
+  margin-inline: 300px; /* untk meberikan jarak kanan dan kiri */
 }
 
 .div1 {
