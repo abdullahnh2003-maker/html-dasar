@@ -1,0 +1,89 @@
+body,
+.body {
+  background-color: whitesmoke;
+  margin-inline: 20px;
+}
+
+.box1 {
+  background-color: rgb(229, 245, 250);
+  text-align: center;
+  padding: 35px;
+  margin: 20px;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  display: block;
+}
+
+.box1 h1 {
+  color: rgb(79, 79, 166);
+  font-family: initial;
+  text-transform: capitalize;
+}
+
+.box1 h7 {
+  color: #778090;
+  font-style: italic;
+  letter-spacing: 0px;
+  font-weight: 450;
+}
+
+.section {
+  background-color: white;
+  border: 2px solid #e5e7eb;
+  padding: 35px;
+  margin: 20px;
+  border-radius: 12px;
+}
+
+.section h3 {
+  color: green;
+}
+.section p {
+  line-height: 22px;
+}
+span,
+.span {
+  color: red;
+  text-decoration: underline;
+}
+
+.section1 {
+  background-color: rgb(136, 190, 190);
+  border-left: 6px solid rgb(92, 92, 173);
+  letter-spacing: -1px;
+}
+
+.section2 {
+  background-color: rgb(210, 98, 98);
+  border-left: 4px solid red;
+  letter-spacing: -1px;
+}
+
+footer,
+.footer {
+  background: #333;
+  color: #fff;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.BY {
+  margin: 40px;
+  margin-left: 25cm;
+  background: #778090;
+  padding: 50px;
+}
+
+@font-face {
+  font-family: 'font bismillah';
+  src: url('fonts/Bismillah\ Script.ttf');
+}
+
+.teks {
+  font-family: font bismillah;
+  color: red;
+  font-size: xx-large;
+}
+

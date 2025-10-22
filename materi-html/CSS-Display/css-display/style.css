@@ -1,0 +1,70 @@
+.card {
+  background: #f9f9f9;
+  text-align: center;
+  place-content: center;
+  place-items: center;
+  height: 250px;
+  width: 250px;
+  border: 2px dashed #333;
+  border-radius: 6px;
+}
+.area {
+  width: 100px;
+  height: 100px;
+  place-content: center;
+  display: block;
+  background: yellow;
+  margin-bottom: 10px;
+}
+
+.area h3,
+.area p {
+  margin: 0 auto;
+}
+.area p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* inline + block */
+.area-inline-block {
+  display: inline-block;
+  background: gold;
+}
+
+/* inline = sejajar */
+.area-inline {
+  background: orange;
+}
+.area-inline p {
+  display: inline;
+  background: aqua;
+  padding: 4px;
+}
+
+/* none = sembunyi */
+.area-none {
+  background: tomato;
+  display: none;
+}
+/* :hover = saat diarahkan */
+.card:hover .area-none {
+  display: block;
+}
+
+/* flexbox dasar */
+.flexbox-area {
+  /* wadahnya wajib flex */
+  display: flex;
+  /* gap = jarak antar item */
+  gap: 20px;
+  /* flex-direction: atur arah items */
+  /* opsi: row / row-reverse / column / column-reverse */
+  flex-direction: row-reverse;
+  /* atur posisi konten */
+  justify-content: space-between;
+}
+.flexbox-area .card {
+  width: 150px;
+  height: 150px;
+}

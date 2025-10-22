@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'font digital';
+    src: url('fonts/digital-7.ttf');
+}
+
+.digital {
+    font-family: font digital;
+}
+
+@font-face {
+    font-family: 'manga';
+    src:url('fonts/Manga\ Style.ttf')
+}
+.manga {
+    font-family: manga;
+}
+/*  atur posisi text*/
+.text-tengah {
+  text-align: center;
+}
+
+.text-kiri {
+  text-align: left;
+}
+
+.text-kanan {
+  text-align: right;
+}
+.text-rata {
+  text-align: justify;
+}
+
+/* atur ketebalan */
+
+.tipis {
+  font-weight: 100;
+  color: rgb(255, 0, 0);
+  font-size: small;
+}
+.agak tebal {
+  font-weight: 500;
+  color: aqua;
+  font-size: 30px;
+}
+.tebal {
+  /* bold = 700 */
+  font-weight: bold;
+  color: skyblue;
+  font-size: x-large;
+}
+
+/* hilagkan underline pd link (a) */
+.button-instagram {
+  text-decoration: none;
+  background-color: tomato;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 20px;
+}
+
+/* atur jarak tinggi antar baris text */
+.pendek {
+  line-height: 0.8;
+  background-color: coral;
+}
+.tinggi {
+  line-height: 2;
+  background-color: chartreuse;
+}
+
+/* atur jarak antar huruf */
+.rapat {
+  letter-spacing: -2px;
+  background-color: skyblue;
+}
+.renggang {
+  letter-spacing: 6px;
+  background-color: plum;
+}
+
+/* atur jarak antar kata */
+.dekat {
+  word-spacing: -3px;
+  background-color: plum;
+}
+.jauh {
+  word-spacing: 6px;
+  background-color: plum;
+}
+

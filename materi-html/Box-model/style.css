@@ -1,0 +1,96 @@
+.card {
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 2px #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+#box1 {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  color: white;
+  line-height: 10; /* mengatur jarak antar baris teks */
+}
+
+#box2 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  color: white;
+  line-height: 10;
+  /* padding: 10px; */
+  /* padding: 10px 20px 10px 20px; */
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+}
+
+#box3 {
+  width: 200px;
+  height: 200px;
+  background-color: indigo;
+  color: white;
+  line-height: 10;
+  padding: 10px;
+  border: 5px solid aqua;
+}
+
+#box4 {
+  width: 200px;
+  height: 200px;
+  background-color: gold;
+  color: white;
+  line-height: 10;
+  padding: 10px;
+  border: 5px solid tomato;
+  /* margin: 20px; */
+  /* margin: 20px 10px 20px 10px; */
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+#box5 {
+  width: 200px;
+  height: 200px;
+  background-color: maroon;
+  color: white;
+  line-height: 10;
+}
+
+#box6 {
+  width: 200px;
+  height: 200px;
+  background-color: moccasin;
+  color: white;
+  line-height: 10;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+#box7 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  color: white;
+  line-height: 10;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+
+#box8 {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  color: white;
+  line-height: 10;
+  position: fixed;
+  top: 25px;
+  left: 40px;
+}
+
