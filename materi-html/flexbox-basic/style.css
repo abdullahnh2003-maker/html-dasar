@@ -21,7 +21,6 @@
   /* atir posisi horizontal */
   /* defoult = flex-star (flex-end, center, space-between) */
   justify-content: center;
-  /* atur penempatan items */
   /* default= flex-star (flex-end,center, stretch,dll ) */
   align-items: center;
 }

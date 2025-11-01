@@ -23,7 +23,7 @@ body,
 .box1 h7 {
   color: #778090;
   font-style: italic;
-  letter-spacing: 0px;
+  letter-spacing: 0px; /* jarak antar huruf */
   font-weight: 450;
 }
 
@@ -39,7 +39,7 @@ body,
   color: green;
 }
 .section p {
-  line-height: 22px;
+  line-height: 22px; /* jarak antar baris */
 }
 span,
 .span {
@@ -76,9 +76,9 @@ footer,
   padding: 50px;
 }
 
-@font-face {
+@font-face { /* memesukkan font buatan sendiri*/
   font-family: 'font bismillah';
-  src: url('fonts/Bismillah\ Script.ttf');
+  src: url('fonts/Bismillah\ Script.ttf'); /* Lokasi file font di folder */
 }
 
 .teks {

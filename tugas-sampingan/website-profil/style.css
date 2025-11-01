@@ -9,7 +9,7 @@ header,
   background: white;
   color: rgb(2, 14, 233);
   padding: 15px;
-  text-align: center;
+  /* text-align: center;flex-wrap: wrap; */
 }
 h2,
 .header h2 {
@@ -143,4 +143,17 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 14px;
+}
+
+
+/* Mobile-first: tulis style dasar di sini */
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1023px) {
+  /* penyesuaian tablet */
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* penyesuaian desktop */
 }
