@@ -1,6 +1,6 @@
 body {
-  margin-inline: 20px;
-  margin: 50px;
+  /* margin-inline: 20px; */
+  padding: 50px;
   /* background: #cde3f8 */
   /* url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40'%3E%3Cg fill='%233484bc' fill-opacity='0.4'%3E%3Cpath d='M40 10L36.67 0h-2.11l3.33 10H20l-2.28 6.84L12.11 0H10l6.67 20H10l-2.28 6.84L2.11 10 5.44 0h-2.1L0 10l6.67 20-3.34 10h2.11l2.28-6.84L10 40h20l2.28-6.84L34.56 40h2.1l-3.33-10H40l2.28-6.84L47.89 40H50l-6.67-20L50 0h-2.1l-5.62 16.84L40 10z'/%3E%3C/g%3E%3C/svg%3E"); */
   background-color: #94c0e7;
@@ -13,6 +13,7 @@ header {
   color: rgb(2, 14, 233);
   text-align: center;
   padding: 10px;
+  border-radius: 8px;
 }
 
 .h {
@@ -112,7 +113,7 @@ td {
 iframe,
 .iframe {
   border-radius: 5px;
-  max-width: 400px;
+  max-width: 390px;
   /* max-width: 400px; */
 }
 footer {
