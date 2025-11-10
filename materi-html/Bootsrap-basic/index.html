@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Demo</title>
+    <!-- load boostrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- varian warna/ color di boostrap -->
+    <!-- primary / success / info / warning / danger -->
+    <div class="container bg-light">
+      <h1 class="text-light">Hello, world!</h1>
+      <p>kebakaran terjadi di tempat <b>tambal sikil</b></p>
+      <button type="button" class="btn btn-success">
+        <b>sambung sikil</b>
+      </button>
+      <div class="alert alert-warning" role="alert">
+        <strong class="bg-danger border border-danger text-white"
+          >PERINGATAN</strong
+        >
+        <h3 class="text-capitalize c">HATI-HATI monyet lepas</h3>
+        <button type="reset" class="btn btn-danger">BELI MONYET</button>
+      </div>
+      <!-- layout responsive -->
+      <!-- wajib dibungkus clas 'row' -->
+      <!-- patokan gridnya berjumla 12 kolom -->
+      <div class="row">
+        <!-- .col-6 : tulis class div dgn class khusus -->
+        <!-- 2 kolom = 6 + 6 = 12 grid -->
+        <div class="alert bg-info">KOLOM KIRI</div>
+        <div class="alert bg-success">KOLOM KANAN</div>
+      </div>
+      <!-- end row -->
+      <div class="row">
+        <!-- layar medium keatas 4 kolom : col-md-3 -->
+         <!-- layar kecil 2 kolom : col-sm-6 -->
+          <!-- layar super kecil 1 kolom : col-12 -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <img
+            class="img-thumbnail"
+            src="https://images.unsplash.com/photo-1517480448885-d5c53555ba8c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFsaXxlbnwwfDJ8MHx8fDI%3D&auto=format&fit=crop&q=60&w=600"
+            alt="gambar"
+          />
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <img
+            class="img-thumbnail"
+            src="https://images.unsplash.com/photo-1612428978467-80244027cc2b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGluZG9uZXNpYXxlbnwwfDJ8MHx8fDI%3D&auto=format&fit=crop&q=60&w=600"
+            alt="gambar"
+          />
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <img
+            class="img-thumbnail"
+            src="https://images.unsplash.com/flagged/photo-1557527694-b679da68a0c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnJvbW98ZW58MHwyfDB8fHwy&auto=format&fit=crop&q=60&w=600"
+            alt="gambar"
+          />
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <img
+            class="img-thumbnail"
+            src="https://images.unsplash.com/photo-1731800747251-539ad71a4205?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZXZlcmVzdHxlbnwwfDJ8MHx8fDI%3D&auto=format&fit=crop&q=60&w=600"
+            alt="gambar"
+          />
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <img class="img-thumbnail" src="https://images.unsplash.com/photo-1722661250792-4f9b436ae825?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnJvbW98ZW58MHwyfDB8fHwy&auto=format&fit=crop&q=60&w=600" alt="">
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <img class="img-thumbnail" src="https://images.unsplash.com/photo-1722661250926-18ff5a758eb0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnJvbW98ZW58MHwyfDB8fHwy&auto=format&fit=crop&q=60&w=600" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- container-fluid: full width 100% -->
+    <!-- <div class="container-fluid bg-danger">
+      <h1>fluid width 100%</h1>
+      <p>kebakaran terjadi di tempat tambal ban</p>
+    </div> -->
+
+    <!-- load bootsrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

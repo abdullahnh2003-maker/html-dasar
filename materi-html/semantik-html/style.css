@@ -105,7 +105,7 @@ border: 1px solid #ddd;
 margin: 10px;
 background: #fff;
 border-radius: 8px;
-overflow: hidden;
+overflow: hidden; /*mengatur text agar tdk keluar dr kotak*/
 }
 .galery .card img {
   width: 100%;
