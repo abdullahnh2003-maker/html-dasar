@@ -76,12 +76,16 @@ table {
   width: 100%;
   border-collapse: collapse; /* untk menggabung kan garis2 pd table*/
   margin: 10px 0;
-
-  /* text-align: center; */
+  text-align: center;
 }
 td {
   border: 1px solid #ddd;
   padding: 8px;
+}
+
+thead {
+  background-color: blue;
+  color: white;
 }
 
 .galery {
