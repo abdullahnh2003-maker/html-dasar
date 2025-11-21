@@ -1,83 +1,137 @@
-<html>
-  <head>
-    <title>Biodata santri</title>
-    <link rel="stylesheet" href="./tugas-sampingan/website-profil/style.css" />
-  </head>
-  <body>
-    <div></div>
-    <header>
-      <h1>BIODATA SANTRI</h1>
-      <h2>kelas 10-A-Asrama ibnu taymiyyah</h2>
-      <hr />
-      <nav>
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a class="active" href="./tugas-sampingan/website-profil/biodata.html">Biodata</a></li>
-          <li><a href="./tugas-sampingan/website-profil/jadwal.html">jadwal</a></li>
-          <li><a href="./tugas-sampingan/website-profil/galeri.html">galeri</a></li>
-          <li><a href="./tugas-sampingan/website-profil/feedback.html">Feedback</a></li>
-        </ul>
-      </nav>
-    </header>
-    <br />
-    <main>
-      <section>
-        <h3 class="h">biodata singkat</h3>
-        <img class="imgfoto" src="./images/saya.jpg" />
-        <p>
-          assalamualaikum, saya santri Ma'had HSI Boarding School purworejo.<br />
-          saya disini menyukai pelajaran b.arab dan html & css, dan saya ingin
-          menjadi pribadi yg bermanfaat bagi diri saya dan orang lain.<br />
-          saat ini saya sedang mempelajari html dasar untuk membuat website
-          sederhana.
-        </p>
-      </section>
-    </main>
-    <hr />
-    <main>
-      <section>
-        <h3 class="h">Hobi saya:</h3>
-        <ul>
-          <li>bola(futsal,lapangan,pingpong,Voli)</li>
-          <li>berenang</li>
-        </ul>
-        <h3 class="h">cita-cita saya:</h3>
-        <ol>
-          <li>Developer</li>
-          <li>ustadz</li>
-        </ol>
-      </section>
-    </main>
-    <hr />
-    <main>
-      <section>
-        <h3 class="h">kontak saya:</h3>
-        <ul type="square">
-          <li>
-            <p><b>WhatsApp:</b> 0857-2967-0353</p>
-          </li>
-          <li>
-            <p><b>Telegram:</b> @Abdullah</p>
-          </li>
-          <li>
-            <p>
-              <b>Instagram:</b>
-              <a class="link" href="https://www.instagram.com/_abdullahnh/"
-                >instagram.com/_abdullahnh</a
-              >
-              atau
-              <a
-                class="link"
-                href="https://www.instagram.com/_abdullahnh/?__pwa=1"
-                >instagram.com/_abdullahnh</a
-              >
-            </p>
-          </li>
-          <li>
-            <p><b>Email:</b> abdullah2003@gmail.com</p>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </body>
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FilmKita – Versi Lanjutan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle("dark");
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
+
+  <!-- NAVBAR -->
+  <nav class="flex justify-between items-center px-6 py-4 shadow bg-white dark:bg-gray-800 fixed w-full top-0 z-50">
+    <h1 class="text-2xl font-bold">FilmKita+</h1>
+    <div class="space-x-6 hidden md:flex">
+      <a href="#" class="hover:text-blue-500 dark:hover:text-blue-400">Home</a>
+      <a href="#" class="hover:text-blue-500 dark:hover:text-blue-400">Film</a>
+      <a href="#" class="hover:text-blue-500 dark:hover:text-blue-400">Serial</a>
+      <a href="#" class="hover:text-blue-500 dark:hover:text-blue-400">Genre</a>
+    </div>
+    <button onclick="toggleDarkMode()" 
+      class="px-3 py-1 rounded border dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700">
+      🌓
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="h-[450px] w-full bg-cover bg-center mt-16 relative"
+    style="background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4');">
+    <div class="absolute inset-0 bg-black/60 flex flex-col justify-center px-6 md:px-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white">Tonton Film Favoritmu</h2>
+      <p class="text-gray-300 mt-3 max-w-xl">Film terbaru, terpopuler, dan paling seru. Semua ada di FilmKita+!</p>
+      <button class="mt-6 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl w-fit">
+        🎬 Tonton Sekarang
+      </button>
+    </div>
+  </section>
+
+  <!-- SLIDER SECTION -->
+  <section class="mt-12 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-4">🔥 Film Trending</h2>
+
+    <div class="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
+      <!-- CARD SLIDER -->
+      <div class="min-w-[200px] bg-gray-800 text-white rounded-xl overflow-hidden hover:scale-105 transition">
+        <img src="https://image.tmdb.org/t/p/w500/ktzRvpZANYZlWlAlFqFbYGdBlH2.jpg">
+        <div class="p-3">
+          Spider-Man<br>
+          ⭐ 8.5
+        </div>
+      </div>
+
+      <div class="min-w-[200px] bg-gray-800 text-white rounded-xl overflow-hidden hover:scale-105 transition">
+        <img src="https://image.tmdb.org/t/p/w500/r7XifzvtezNt31ypvsmb6Oqxw49.jpg">
+        <div class="p-3">
+          Joker<br>
+          ⭐ 8.7
+        </div>
+      </div>
+
+      <div class="min-w-[200px] bg-gray-800 text-white rounded-xl overflow-hidden hover:scale-105 transition">
+        <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7f3EGgcqPjEYU1xu2Si.jpg">
+        <div class="p-3">
+          Avengers Endgame<br>
+          ⭐ 9.0
+        </div>
+      </div>
+
+      <div class="min-w-[200px] bg-gray-800 text-white rounded-xl overflow-hidden hover:scale-105 transition">
+        <img src="https://image.tmdb.org/t/p/w500/8j7pUr0O7rR7qAbKLXRgN1vYRis.jpg">
+        <div class="p-3">
+          John Wick 4<br>
+          ⭐ 8.2
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRID FILM -->
+  <section class="max-w-6xl mx-auto px-4 mt-16">
+    <h2 class="text-3xl font-bold text-center mb-10">🎥 Pilihan Film</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- CARD -->
+      <div class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden hover:scale-105 duration-300">
+        <img src="https://image.tmdb.org/t/p/w500/ktzRvpZANYZlWlAlFqFbYGdBlH2.jpg"
+          class="h-56 w-full object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Spider-Man</h3>
+          <p class="text-yellow-500">⭐ 8.5/10</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden hover:scale-105 duration-300">
+        <img src="https://image.tmdb.org/t/p/w500/r7XifzvtezNt31ypvsmb6Oqxw49.jpg"
+          class="h-56 w-full object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Joker</h3>
+          <p class="text-yellow-500">⭐ 8.7/10</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden hover:scale-105 duration-300">
+        <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7f3EGgcqPjEYU1xu2Si.jpg"
+          class="h-56 w-full object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Avengers: Endgame</h3>
+          <p class="text-yellow-500">⭐ 9.0/10</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden hover:scale-105 duration-300">
+        <img src="https://image.tmdb.org/t/p/w500/8j7pUr0O7rR7qAbKLXRgN1vYRis.jpg"
+          class="h-56 w-full object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">John Wick 4</h3>
+          <p class="text-yellow-500">⭐ 8.2/10</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-16 py-6 bg-black text-center text-gray-300">
+    © 2025 FilmKita+. Semua hak dilindungi.
+  </footer>
+
+</body>
 </html>
