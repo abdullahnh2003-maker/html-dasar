@@ -1,0 +1,42 @@
+body {
+    background: black;
+}
+
+header {
+    margin: 0px;
+    position:fixed;
+    width: 1000px;
+    display: flex;
+    /* flex-direction: column; */
+    background: rgb(132, 194, 251);
+    text-align:right;
+
+}
+
+nav{
+    display: inline;
+    flex-direction: column;
+    text-align: right;
+}
+
+/* nav {
+  background: #e1e7ef;
+  padding: 10px;
+  text-align: center;
+} */
+nav ul {
+  list-style: none;
+  display: flex ;
+  /* flex-direction: column; mengatur elemen : column : mangatur elemen menjejer kebawah */
+  gap: 10px; /*menagtur jarak antar elemen*/
+  padding: 0;
+}
+nav a {
+  display: block;
+  color: rgb(6, 34, 245);
+  text-decoration: none;
+  /* background: white;  */
+  /* border: 2px solid #e5e7eb; */
+  border-radius: 22px;
+  padding: 8px 14px;
+}

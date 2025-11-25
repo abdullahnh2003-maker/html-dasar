@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+  <!-- data-theme="light" -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
   </head>
   <body>
-    <header>
+    <form action="index.html" method="get">
+      <!-- <link rel="stylesheet" href="index.html"> -->
+    
+    <header style="text-align: center;">
       <h1>Formulir Umpan Balik</h1>
       <h2>Kritik, Saran, dan Masukan</h2>
       <hr />
-      <nav>
+      <!-- <nav style="text-align: center;">
         <ul>
           <li><a href="index.html">beranda</a></li>
           <li><a href="biodata.html">Biodata</a></li>
@@ -19,7 +27,7 @@
           <li><a href="galeri.html">Galeri</a></li>
           <li><a class="active" href="feedback.html">Feedback</a></li>
         </ul>
-      </nav>
+      </nav> -->
       <hr />
     </header>
     <br />
@@ -30,7 +38,7 @@
           Berikan masukan terbaik anda untuk pengembangan website provil ini.
           semua input bersifat wajib kecuali nama.
         </p>
-        <nav>
+        <nav style="display: flex; flex-direction: column; text-align: left;">
           <label for="namaLengkap">Nama Anda (Opsional):</label>
           <input
             type="text"
@@ -39,7 +47,7 @@
             placeholder="Tulis nama Anda"
           />
         </nav>
-        <nav>
+        <nav style="display: flex; flex-direction: column; text-align: left;">
           <label for="alamat_email :">alamat email</label>
           <input
             type="email"
@@ -48,7 +56,7 @@
             placeholder="nama@email.com"
           />
         </nav>
-        <nav>
+        <nav style="display: flex; flex-direction: column; text-align: left;">
           <label for="masukkan angka 1-10 :"
             >Ranting Kepuasan Website (Skala 1-10)</label
           >
@@ -61,16 +69,24 @@
             required
           />
         </nav>
-        <nav>
+        <nav style="display: flex; flex-direction: column; text-align: left;">
           <h4>Rekomendasi Website Ini</h4>
-          <input type="radio" name="ya, sangat" id="Ya, sangat" />
-          <label for="Ya, Sangat" style="display: inline">Ya, sangat</label>
-          <input type="radio" name="Mungkin Saja" id="Mungkin Saja" />
-          <label for="Mungkin Saja" style="display: inline">Mungkin Saja</label>
-          <input type="radio" name="Tidak" id="Tidak" />
-          <label for="Tidak" style="display: inline">Tidak</label>
+          <input type="radio" name="tanya" id="Ya,sangat" />
+          <label for="Ya,Sangat">Ya, sangat</label>
+          <input type="radio" name="tanya" id="Mungkin Saja" />
+          <label for="Mungkin Saja">Mungkin Saja</label>
+          <input type="radio" name="tanya" id="Tidak" />
+          <label for="Tidak" >Tidak</label>
         </nav>
-        <nav>
+         <!-- <div>
+          <p>Jenis Kelamin</p>
+          <input type="radio" name="jenis_kelamin" id="lakiLaki" />
+          <label for="lakiLaki">Laki-laki</label>
+          <input type="radio" name="jenis_kelamin" id="perempuan" />
+          <label for="perempuan">Perempuan</label>
+          <br /><br />
+        </div> -->
+        <nav style="display: flex; flex-direction: column; text-align: left;">
           <h4>Topik yang Paling Menarik:</h4>
           <input type="checkbox" name="Topik" id="Biodata" />
           <label for="Galeri" style="display: inline">biodata </label>
@@ -79,7 +95,7 @@
           <input type="checkbox" name="Topik" id="Galeri" />
           <label for="Galeri" style="display: inline">Galeri</label>
         </nav>
-        <nav>
+        <nav style="display: flex; flex-direction: column; text-align: left;">
           <label for="bidang">Saran Pengembangan di Bidang:</label>
           <select id="bidang" required>
             <option value="">-- Pilih Bidang --</option>
@@ -89,7 +105,7 @@
             <option>Kinerja</option>
           </select>
         </nav>
-        <nav>
+        <nav style="display: flex; flex-direction: column; text-align: left;">
           <label for="note">Pesan/Saran Lengkap:</label>
           <textarea
             name="note"
@@ -97,11 +113,12 @@
             placeholder="Tulis Pesan Dan Saran Anda Secara detail di sini..."
           ></textarea>
         </nav>
-        <nav class="grid">
+        <nav class="grid"  style="display: flex; flex-direction: column; text-align: left;">
           <button type="reset">Batal</button>
           <button type="submit">Simpan</button>
         </nav>
       </section>
     </main>
+    </form>
   </body>
 </html>
