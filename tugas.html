@@ -1,137 +1,121 @@
-<!DOCTYPE html>
-<html lang="id" class="dark">
+<!doctype html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FilmKita – Versi Lanjutan</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Tailwind Full Version</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Dark mode toggle
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle("dark");
-    }
-  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
-
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
-
+<body class="bg-neutral-900 text-neutral-100">
   <!-- NAVBAR -->
-  <nav class="flex justify-between items-center px-6 py-4 shadow bg-white dark:bg-gray-800 fixed w-full top-0 z-50">
-    <h1 class="text-2xl font-bold">FilmKita+</h1>
-    <div class="space-x-6 hidden md:flex">
-      <a href="#" class="hover:text-blue-500 dark:hover:text-blue-400">Home</a>
-      <a href="#" class="hover:text-blue-500 dark:hover:text-blue-400">Film</a>
-      <a href="#" class="hover:text-blue-500 dark:hover:text-blue-400">Serial</a>
-      <a href="#" class="hover:text-blue-500 dark:hover:text-blue-400">Genre</a>
+  <header class="p-4 fixed top-0 left-0 w-full bg-neutral-900/70 backdrop-blur-md z-20 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">MyPortfolio</h1>
+      <nav class="hidden md:flex gap-8 text-sm">
+        <a href="#hero" class="hover:text-red-400">Home</a>
+        <a href="#about" class="hover:text-red-400">About</a>
+        <a href="#projects" class="hover:text-red-400">Projects</a>
+        <a href="#skills" class="hover:text-red-400">Skills</a>
+        <a href="#testimonials" class="hover:text-red-400">Testimonials</a>
+        <a href="#contact" class="hover:text-red-400">Contact</a>
+      </nav>
     </div>
-    <button onclick="toggleDarkMode()" 
-      class="px-3 py-1 rounded border dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700">
-      🌓
-    </button>
-  </nav>
+  </header>
 
   <!-- HERO -->
-  <section class="h-[450px] w-full bg-cover bg-center mt-16 relative"
-    style="background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4');">
-    <div class="absolute inset-0 bg-black/60 flex flex-col justify-center px-6 md:px-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-white">Tonton Film Favoritmu</h2>
-      <p class="text-gray-300 mt-3 max-w-xl">Film terbaru, terpopuler, dan paling seru. Semua ada di FilmKita+!</p>
-      <button class="mt-6 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl w-fit">
-        🎬 Tonton Sekarang
-      </button>
-    </div>
-  </section>
-
-  <!-- SLIDER SECTION -->
-  <section class="mt-12 max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-4">🔥 Film Trending</h2>
-
-    <div class="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
-      <!-- CARD SLIDER -->
-      <div class="min-w-[200px] bg-gray-800 text-white rounded-xl overflow-hidden hover:scale-105 transition">
-        <img src="https://image.tmdb.org/t/p/w500/ktzRvpZANYZlWlAlFqFbYGdBlH2.jpg">
-        <div class="p-3">
-          Spider-Man<br>
-          ⭐ 8.5
-        </div>
-      </div>
-
-      <div class="min-w-[200px] bg-gray-800 text-white rounded-xl overflow-hidden hover:scale-105 transition">
-        <img src="https://image.tmdb.org/t/p/w500/r7XifzvtezNt31ypvsmb6Oqxw49.jpg">
-        <div class="p-3">
-          Joker<br>
-          ⭐ 8.7
-        </div>
-      </div>
-
-      <div class="min-w-[200px] bg-gray-800 text-white rounded-xl overflow-hidden hover:scale-105 transition">
-        <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7f3EGgcqPjEYU1xu2Si.jpg">
-        <div class="p-3">
-          Avengers Endgame<br>
-          ⭐ 9.0
-        </div>
-      </div>
-
-      <div class="min-w-[200px] bg-gray-800 text-white rounded-xl overflow-hidden hover:scale-105 transition">
-        <img src="https://image.tmdb.org/t/p/w500/8j7pUr0O7rR7qAbKLXRgN1vYRis.jpg">
-        <div class="p-3">
-          John Wick 4<br>
-          ⭐ 8.2
-        </div>
+  <section id="hero" class="min-h-screen flex items-center justify-center text-center px-6">
+    <div data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Halo, Saya <span class="text-red-500">Abdullah</span></h2>
+      <p class="text-neutral-300 max-w-xl mx-auto">Frontend Developer yang suka membangun website modern, cepat, dan responsif menggunakan Tailwind CSS.</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="#projects" class="px-6 py-3 bg-red-600 rounded-md hover:bg-red-700 transition">Lihat Project</a>
+        <a href="#contact" class="px-6 py-3 border border-neutral-500 rounded-md hover:bg-neutral-800 transition">Kontak</a>
       </div>
     </div>
   </section>
 
-  <!-- GRID FILM -->
-  <section class="max-w-6xl mx-auto px-4 mt-16">
-    <h2 class="text-3xl font-bold text-center mb-10">🎥 Pilihan Film</h2>
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold mb-6 text-center">Tentang Saya</h3>
+    <p class="text-neutral-300 max-w-3xl mx-auto text-center" data-aos="fade-up">Saya adalah seorang developer yang fokus pada estetika, performa, dan pengalaman pengguna. Saya suka membuat UI modern, clean, dan fungsional.</p>
+  </section>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-      <!-- CARD -->
-      <div class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden hover:scale-105 duration-300">
-        <img src="https://image.tmdb.org/t/p/w500/ktzRvpZANYZlWlAlFqFbYGdBlH2.jpg"
-          class="h-56 w-full object-cover">
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">Spider-Man</h3>
-          <p class="text-yellow-500">⭐ 8.5/10</p>
-        </div>
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold mb-10 text-center">Projects</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-neutral-800 p-4 rounded-md shadow-lg hover:scale-105 transition" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80" class="rounded mb-3 h-40 w-full object-cover" />
+        <h4 class="font-semibold">Portfolio Website</h4>
+        <p class="text-sm text-neutral-400 mt-2">Website pribadi modern dengan Tailwind.</p>
       </div>
 
-      <div class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden hover:scale-105 duration-300">
-        <img src="https://image.tmdb.org/t/p/w500/r7XifzvtezNt31ypvsmb6Oqxw49.jpg"
-          class="h-56 w-full object-cover">
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">Joker</h3>
-          <p class="text-yellow-500">⭐ 8.7/10</p>
-        </div>
+      <div class="bg-neutral-800 p-4 rounded-md shadow-lg hover:scale-105 transition" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80" class="rounded mb-3 h-40 w-full object-cover" />
+        <h4 class="font-semibold">Dashboard UI</h4>
+        <p class="text-sm text-neutral-400 mt-2">Dashboard admin full responsif.</p>
       </div>
 
-      <div class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden hover:scale-105 duration-300">
-        <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7f3EGgcqPjEYU1xu2Si.jpg"
-          class="h-56 w-full object-cover">
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">Avengers: Endgame</h3>
-          <p class="text-yellow-500">⭐ 9.0/10</p>
-        </div>
+      <div class="bg-neutral-800 p-4 rounded-md shadow-lg hover:scale-105 transition" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80" class="rounded mb-3 h-40 w-full object-cover" />
+        <h4 class="font-semibold">Landing Page</h4>
+        <p class="text-sm text-neutral-400 mt-2">Landing page minimalis dan elegan.</p>
       </div>
-
-      <div class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden hover:scale-105 duration-300">
-        <img src="https://image.tmdb.org/t/p/w500/8j7pUr0O7rR7qAbKLXRgN1vYRis.jpg"
-          class="h-56 w-full object-cover">
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">John Wick 4</h3>
-          <p class="text-yellow-500">⭐ 8.2/10</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="mt-16 py-6 bg-black text-center text-gray-300">
-    © 2025 FilmKita+. Semua hak dilindungi.
+  <!-- SKILLS -->
+  <section id="skills" class="bg-neutral-800 py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-10">Skills</h3>
+      <div class="flex flex-wrap justify-center gap-4 text-sm" data-aos="fade-up">
+        <span class="px-4 py-2 bg-neutral-900 rounded">HTML</span>
+        <span class="px-4 py-2 bg-neutral-900 rounded">CSS</span>
+        <span class="px-4 py-2 bg-neutral-900 rounded">JavaScript</span>
+        <span class="px-4 py-2 bg-neutral-900 rounded">Tailwind CSS</span>
+        <span class="px-4 py-2 bg-neutral-900 rounded">React</span>
+        <span class="px-4 py-2 bg-neutral-900 rounded">Next.js</span>
+        <span class="px-4 py-2 bg-neutral-900 rounded">Git</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold mb-10 text-center">Testimonials</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-neutral-800 p-4 rounded-md shadow" data-aos="fade-right">
+        <p class="text-neutral-300">“Abdullah luar biasa! UI yang ia buat sangat rapi dan profesional.”</p>
+        <p class="text-red-400 mt-3 text-sm">— Client A</p>
+      </div>
+
+      <div class="bg-neutral-800 p-4 rounded-md shadow" data-aos="fade-up">
+        <p class="text-neutral-300">“Website responsif dan cepat. Sangat memuaskan!”</p>
+        <p class="text-red-400 mt-3 text-sm">— Client B</p>
+      </div>
+
+      <div class="bg-neutral-800 p-4 rounded-md shadow" data-aos="fade-left">
+        <p class="text-neutral-300">“Kerjanya cepat, rapih, dan komunikatif.”</p>
+        <p class="text-red-400 mt-3 text-sm">— Client C</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-20 text-center">
+    <h3 class="text-3xl font-bold mb-6">Contact</h3>
+    <p class="text-neutral-300 mb-4">Hubungi saya lewat email:</p>
+    <a href="mailto:email@example.com" class="text-red-400 text-lg hover:underline">email@example.com</a>
+  </section>
+
+  <footer class="py-6 text-center text-neutral-500 text-sm">
+    © 2025 Abdullah • Full Portfolio Built with TailwindCSS
   </footer>
 
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
