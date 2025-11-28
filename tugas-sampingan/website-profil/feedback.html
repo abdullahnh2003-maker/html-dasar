@@ -12,14 +12,15 @@
     />
   </head>
   <body>
-    <form action="index.html" method="dialog">
+    <form action="index.html" method="get">
       <!-- <link rel="stylesheet" href="index.html"> -->
-    
-    <header style="text-align: center;">
-      <h1>Formulir Umpan balik</h1>
-      <h2>Kritik, Saran, dan Masukan</h2>
-      <hr />
-      <!-- <nav style="text-align: center;">
+
+      <!-- <header style="text-align: center">
+        
+        <h1>Formulir Umpan balik</h1>
+        <h2>Kritik, Saran, dan Masukan</h2>
+        <hr />
+        <nav style="text-align: center;">
         <ul>
           <li><a href="index.html">beranda</a></li>
           <li><a href="biodata.html">Biodata</a></li>
@@ -27,36 +28,86 @@
           <li><a href="galeri.html">Galeri</a></li>
           <li><a class="active" href="feedback.html">Feedback</a></li>
         </ul>
-      </nav> -->
-      <hr />
-    </header>
-    <br />
-    <main>
-      <section>
-        <h3 class="h">Formulir Kontak & Saran</h3>
-        <p>
+      </nav>
+        <hr />
+      </header> -->
+      <div id="demotext">
+        <h1>Feedback</h1>
+      </div>
+      <main>
+        <section>
+          <!-- <h3 class="h">Formulir Kontak & Saran</h3> -->
+          <!-- <p>
           Berikan masukan terbaik anda untuk pengembangan website provil ini.
           semua input bersifat wajib kecuali nama.
-        </p>
-        <nav style="display: flex; flex-direction: column; text-align: left;">
-          <label for="namaLengkap">Nama Anda (Opsional):</label>
-          <input
-            type="text"
-            name="namaLengkap"
-            id="nama"
-            placeholder="Tulis nama Anda"
-          />
-        </nav>
-        <nav style="display: flex; flex-direction: column; text-align: left;">
-          <label for="alamat_email :">alamat email</label>
-          <input
-            type="email"
-            name="email"
-            id="alamat_email"
-            placeholder="nama@email.com"
-          />
-        </nav>
-        <nav style="display: flex; flex-direction: column; text-align: left;">
+        </p> -->
+          <nav style="display: flex; flex-direction: column; text-align: left">
+            <label style="font-weight: 700" for="namaLengkap"
+              >Nama Lengkap:</label
+            >
+            <input
+              type="text"
+              name="namaLengkap"
+              id="nama"
+              placeholder="nama Lengkap"
+            />
+          </nav>
+          <nav style="display: flex; flex-direction: column; text-align: left">
+            <label style="font-weight: 700" for="alamat_email :"
+              >alamat email :</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="alamat_email"
+              placeholder="nama@gmail.com"
+            />
+          </nav>
+          <nav style="display: flex; flex-direction: column; text-align: left">
+            <label style="font-weight: 700" for="password">Password :</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="password"
+            />
+          </nav>
+          <nav style="display: flex; flex-direction: column; text-align: left">
+            <label style="font-weight: 700" for="asalDaerah"
+              >Asal Daerah :</label
+            >
+            <select name="asal_daerah" id="asalDaerah">
+              <option value="PRJ">Purworejo</option>
+              <option value="YOG">Yogyakarta</option>
+              <option value="JKT">Jakarta</option>
+              <option value="JKT">solo</option>
+              <option value="JKT">kebumen</option>
+              <option value="JKT">bekasi</option>
+              <option value="JKT">tangerang</option>
+              <option value="JKT">badung</option>
+              <option value="JKT">Sukabumi</option>
+              <option value="JKT">semarang</option>
+              <option value="JKT">sumatra</option>
+              <option value="JKT">kalimantan</option>
+              <option value="JKT">sulawesi</option>
+              <option value="JKT">papua</option>
+              <option value="JKT">maluku</option>
+              <option value="JKT">NTB</option>
+              <option value="JKT">NTT</option>
+              <option value="JKT">Batam</option>
+              <option value="JKT">medan</option>
+            </select>
+          </nav>
+          <p style="font-weight: 700">Jenis Kelamin :</p>
+          <nav style="display: flex; flex-direction: column; text-align: left">
+            <input type="radio" name="jenis_kelamin" id="lakiLaki" />
+            <label for="lakiLaki">Laki-laki</label>
+            <input type="radio" name="jenis_kelamin" id="perempuan" />
+            <label for="perempuan">Perempuan</label>
+            <input type="radio" name="jenis_kelamin" id="tdk memberi tahu" />
+            <label for="tdk memberi tahu">tidak ingin memberi tahu</label>
+          </nav>
+          <!-- <nav style="display: flex; flex-direction: column; text-align: left;">
           <label for="masukkan angka 1-10 :"
             >Ranting Kepuasan Website (Skala 1-10)</label
           >
@@ -68,9 +119,9 @@
             placeholder="1-10"
             required
           />
-        </nav>
-       /
-         <!-- <div>
+        </nav> -->
+
+          <!-- <div>
           <p>Jenis Kelamin</p>
           <input type="radio" name="jenis_kelamin" id="lakiLaki" />
           <label for="lakiLaki">Laki-laki</label>
@@ -78,7 +129,7 @@
           <label for="perempuan">Perempuan</label>
           <br /><br />
         </div> -->
-        <!-- <nav style="display: flex; flex-direction: column; text-align: left;">
+          <!-- <nav style="display: flex; flex-direction: column; text-align: left;">
           <h4>Topik yang Paling Menarik:</h4>
           <input type="checkbox" name="Topik" id="Biodata" />
           <label for="Galeri" style="display: inline">biodata </label>
@@ -87,7 +138,7 @@
           <input type="checkbox" name="Topik" id="Galeri" />
           <label for="Galeri" style="display: inline">Galeri</label>
         </nav> -->
-        <nav style="display: flex; flex-direction: column; text-align: left;">
+          <!-- <nav style="display: flex; flex-direction: column; text-align: left;">
           <label for="bidang">Saran Pengembangan di Bidang:</label>
           <select id="bidang" required>
             <option value="">-- Pilih Bidang --</option>
@@ -96,21 +147,24 @@
             <option>Fitur</option>
             <option>Kinerja</option>
           </select>
-        </nav>
-        <nav style="display: flex; flex-direction: column; text-align: left;">
+        </nav> -->
+          <!-- <nav style="display: flex; flex-direction: column; text-align: left;">
           <label for="note">Pesan/rekomendasi/Saran Lengkap:</label>
           <textarea
             name="note"
             id="note"
             placeholder="Tulis Pesan Dan Saran Anda Secara detail di sini..."
           ></textarea>
-        </nav>
-        <nav class="grid"  style="display: flex; flex-direction: column; text-align: left;">
-          <button type="reset">Batal</button>
-          <button type="submit">Simpan</button>
-        </nav>
-      </section>
-    </main>
+        </nav> -->
+          <nav
+            class="grid"
+            style="display: flex; flex-direction: column; text-align: left"
+          >
+            <button type="reset">Batal</button>
+            <button type="submit">Simpan</button>
+          </nav>
+        </section>
+      </main>
     </form>
   </body>
 </html>
