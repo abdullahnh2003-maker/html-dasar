@@ -46,8 +46,8 @@ nav {
 nav ul {
   list-style: none;
   display: block ;
-  flex-direction: column; /*mengatur elemen : column : mangatur elemen menjejer kebawah*/
-  gap: 10px; /*menagtur jarak antar elemen*/
+  flex-direction: column;/* mengatur elemen : column : mangatur elemen menjejer kebawah*/
+  gap: 10px;/* menagtur jarak antar elemen*/
   padding: 0;
 }
 nav a {
