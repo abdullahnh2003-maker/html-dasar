@@ -21,7 +21,8 @@
         <a href="#skills" class="hover:text-red-400 font-bold">Skills</a>
         <a href="#contact" class="hover:text-red-400 font-bold">Contact</a>
       </nav>
-      <button id="burgerBtn" class="md:hidden">
+      <!-- BURGER BUTTON (Mobile) -->
+    <button id="burgerBtn" class="md:hidden">
       <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round">
         <path d="M4 6h16M4 12h16M4 18h16" />
@@ -29,13 +30,12 @@
     </button>
   </div>
 
-    </div>
-    <!-- MENU MOBILE -->
+  <!-- MENU MOBILE -->
   <div id="mobileNav" class="md:hidden hidden px-4 pb-4">
     <a href="#home" class="block py-2">Home</a>
     <a href="#about" class="block py-2">About</a>
     <a href="#projects" class="block py-2">Projects</a>
-    <a href="#Skills" class="block py-2">Skills</a>
+    <a href="#skills" class="block py-2">Skills</a>
     <a href="#contact" class="block py-2">Contact</a>
   </div>
   </header>
@@ -84,6 +84,12 @@
     </div>
   </section>
     <script>
+      const btn = document.getElementById("burgerBtn");
+  const nav = document.getElementById("mobileNav");
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("hidden");
+  });
   AOS.init();
 </script>
   </body>
