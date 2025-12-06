@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nutriboost</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+  </head>
+  <body class="bg-gray-200">
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+      
+      <nav
+        class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4"
+      >
+      <button id="burgerBtn" class="md:hidden ">
+          <svg
+            class="w-7 h-7 text-blue-300 hover:scale-105"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MENU MOBILE -->
+      <div id="mobileNav" class="md:hidden hidden px-4 pb-4 ">
+        <a class="block py-2 hover:text-red-600 font-bold" href="index.html">Home</a>
+        <a class="block py-2 hover:text-red-600 font-bold" href="produk.html">Produk</a>
+        <a class="block py-2 hover:text-red-600 font-bold" href="tentang.html">Tentang</a>          
+        <a class="block py-2 hover:text-red-600 font-bold" href="kontak.htm">Kontak</a>     
+      </div>
+        <a href="index.html"><img
+          class="w-28"
+          src="https://www.coca-cola.com/content/dam/onexp/global/icons/Coke-company-logo-black.svg"
+          alt="logo coca-cola"
+        /></a>
+
+        <!-- Menu -->
+        <ul class="hidden md:flex items-center gap-10 text-lg">
+          <li>
+            <a class="hover:text-red-600 font-bold transition duration-500" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="hover:text-red-600 font-bold transition duration-500" href="produk.html">Produk</a>
+          </li>
+          <li>
+            <a class="hover:text-red-600 font-bold transition duration-500" href="tentang.html">Tentang</a>
+          </li>
+          <li>
+            <a class="hover:text-red-600 font-bold transition duration-500" href="kontak.htm">Kontak</a>
+          </li>
+        </ul>
+
+        <!-- Button + logo kanan -->
+        <div class="flex items-center gap-5">
+          <a
+            class="bg-amber-600 text-white px-5 py-2 rounded-full hover:bg-amber-800 transition duration-500"
+            href="https://alfagift.id/find/nutriboost"
+          >
+            Beli Sekarang
+          </a>
+
+          <img
+            class="w-14"
+            src="https://www.coca-cola.com/content/dam/onexp/id/home-image/brands/nutriboost/nutriboost-resize/final-svg/Nutriboost-180x180-01.svg"
+            alt="gambar nutriboost"
+          />
+        </div>
+        
+      </nav>
+    </header>
+<br><br><br><br>
+    <!-- HERO SECTION -->
+    <!-- <section class="pt-28 px-4"> -->
+      <!-- <div class="max-w-6xl mx-auto">
+        <img
+          class="rounded-xl shadow-lg"
+          src="https://www.coca-cola.com/content/dam/onexp/id/id/brands/nutriboost/nutriboost-resize/hero%20banner%20desktop.jpg/width1960.jpg"
+          alt="banner nutriboost"
+        />
+      </div>
+    </section> -->
+    <section
+      id="home"
+      class="min-h-screen lg:flex  items-center  text-center px-6  gap-10 lg:flex-row md:flex-col sm:flex-row "
+    >
+      <div data-aos="fade-up">
+        <h2 class="text-amber-900 text-4xl md:text-5xl font-extrabold mb-4" data-aos="fade-left">
+          Segarkan Hari Anda Dengan <span class="text-red-600">Nutriboost</span>
+        </h2>
+        <p class=" max-w-xl mx-auto font-medium">
+          Minuman sehat dengan nutrisi lengkap dan rasa yang luar biasa nikmat. Diproduksi dari bahan-bahan alami pilihan untuk kesehatan optimal Anda dan keluarga.
+        </p>
+      </div>
+      <!-- w-32 h-32 rounded-full -->
+        <div class="grid  grid-cols-1">
+      <div class=" p-4 rounded-md hover:scale-105">
+          <img
+            class=" rounded-xl  hover:scale-105"  data-aos="fade-left"
+            src="https://www.coca-cola.com/content/dam/onexp/id/id/brands/nutriboost/nutriboost-resize/hero%20banner%20desktop.jpg/width1960.jpg"
+            alt="saya"
+          />
+        </div>
+      </div>
+    </section>
+
+  
+    <section
+  id="projects"
+  class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 bg-white/70 backdrop-blur-md"
+>
+  <h1
+    class="font-black text-3xl sm:text-4xl mb-12 text-amber-900"
+    data-aos="fade-up"
+  >
+    Keunggulan <span class="text-red-600">Nutriboost</span>
+  </h1>
+  <p>Nutriboost adalah pilihan tepat untuk gaya hidup sehat Anda dengan kualitas terjamin</p>
+  <br>
+  <div
+    class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 w-full max-w-6xl"
+  >
+    <!-- Card 1 -->
+    <div
+      class="bg-white p-8 rounded-xl shadow-gray-300 shadow-lg hover:scale-105"
+      data-aos="zoom-in"
+    >
+      <div class="text-6xl mb-4">💪</div>
+      <h4 class="font-bold text-xl text-blue-500">Nutrisi Lengkap</h4>
+      <p class="text-sm text-neutral-500 mt-2">
+        Mengandung vitamin & mineral esensial untuk kebutuhan harian Anda.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div
+      class="bg-white p-8 rounded-xl shadow-gray-300 shadow-lg hover:scale-105"
+      data-aos="zoom-in"
+    >
+      <div class="text-6xl mb-4">🌿</div>
+      <h4 class="font-bold text-xl text-green-500">100% Alami</h4>
+      <p class="text-sm text-neutral-500 mt-2">
+        Dibuat dari bahan alami pilihan berkualitas tinggi tanpa pengawet.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div
+      class="bg-white p-8 rounded-xl  shadow-gray-300 shadow-lg hover:scale-105"
+      data-aos="zoom-in"
+    >
+      <div class="text-6xl mb-4">😋</div>
+      <h4 class="font-bold text-xl text-pink-500">Rasa Nikmat</h4>
+      <p class="text-sm text-neutral-500 mt-2">
+        Hadir dalam berbagai varian rasa lezat untuk seluruh keluarga.
+      </p>
+    </div>
+  </div>
+  </section>
+
+
+
+  <section class="bg-white items-center text-center p-10 space-y-14">
+    <h1 class=" font-bold text-5xl ">Siap Untuk Mencoba?</h1>
+    <p class="text-xl ">Bergabunglah dengan ribuan pelanggan yang telah merasakan manfaat  Nutriboost. <br>  Dapatkan penawaran spesial untuk pembelian pertama Anda!</p>
+
+    <!-- chat gpt -->
+    <div class="bg-black text-white rounded-3xl flex items-center justify-between px-8 py-6 max-w-6xl mx-auto">
+
+    <!-- Judul -->
+    <h1 class="text-3xl font-bold">Ikuti Nutriboost</h1>
+
+    <!-- Social Icons -->
+    <div class="flex items-center gap-5">
+
+      <!-- X -->
+      <a href="https://twitter.com/@nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
+        <i class="fa-brands fa-x-twitter text-white hover:text-black text-3xl"></i>
+
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
+        <i class="fa-brands fa-instagram text-white hover:text-black text-3xl"></i>
+
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://youtube.com/user/nutriboostindonesia" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
+<i class="fa-brands fa-youtube text-white hover:text-black text-3xl"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://facebook.com/nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
+        <i class=" fa-brands fa-facebook  text-white hover:text-black text-3xl"></i>
+
+      </a>
+
+    </div>
+  </div>
+  
+  </section>
+
+  <footer class="bg-black p-10">
+    <div class=" hidden items-center justify-between  md:flex gap-10 text-lg">
+      <img class="" src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg" alt="cola">
+      <a class="flex items-center gap-4 bg-black border-2 border-white text-white px-5 py-2 rounded-full hover:bg-gray-800 transition duration-500" href="https://www.coca-cola.com/country-selector">
+        <!-- pakai chat-gpt : sari sini-->
+        <i class="fa-solid fa-location-dot text-white text-3xl"></i>
+
+        <!-- sampai sini -->
+        Indonesia</a>
+    </div>
+    <br><hr><br>
+    <div class="lg:flex gap-40 sm:flex-col lg:flex-row">
+      <div class="flex flex-col space-y-2">
+        <h1 class="text-gray-400  text-xl">Menu</h1>
+        <a class="text-white leading-10 font-bold" href="index.html">Home</a>
+        <a class="text-white leading-10 font-bold" href="produk.html">Produk</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/company">Tentang Kami</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/company">Kontak</a>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <h1 class="text-gray-400  text-xl">tentang kami</h1>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/company">Perusahaan Kami</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/media-center">Pusat Media</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/company/history">Sejarah</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/careers">Karir</a>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <h1 class="text-gray-400  text-xl">Perlu bantuan?</h1>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/about-us/faq">FAQ</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/sitemap">Sitemap</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/about-us/contact-us">Contact Us</a>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <h1 class="text-gray-400 text-xl">Legal</h1>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/privacy-policy">Kebijakan privasi</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/terms-of-use">Ketentuan Penggunaan</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/cookie-policy">Kebijakan Cookie</a>
+        <a class="text-white  font-bold" href="https://www.coca-colacompany.com/policies-and-practices/responsible-marketing-policy">Kebijakan Pemasaran yang Bertanggung Jawab</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/terms-and-conditions">Syarat & Ketentuan</a>
+        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/terms-and-conditions">Pengaturan Cookie</a>
+      </div>
+    <div>
+        
+    </div>
+    
+    </div>
+    <br><hr><br>
+    <div class="items-center justify-between lg:flex sm:flex-row">
+    <div class="flex items-center gap-5">
+
+      <!-- X -->
+      <a href="https://twitter.com/@nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
+        <i class="fa-brands fa-x-twitter text-white hover:text-black text-3xl"></i>
+
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
+        <i class="fa-brands fa-instagram text-white hover:text-black text-3xl"></i>
+
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://youtube.com/user/nutriboostindonesia" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
+<i class="fa-brands fa-youtube text-white hover:text-black text-3xl"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://facebook.com/nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
+        <i class=" fa-brands fa-facebook  text-white hover:text-black text-3xl"></i>
+
+      </a>
+
+    </div>
+    <div class="text-end">
+    <p class="text-white">&COPY; 2025 The Coca‑Cola Company. All rights reserved.</p>
+    </div>
+    </div>
+    <br><br><br>
+  </footer>
+
+    <script>const btn = document.getElementById('burgerBtn')
+      const nav = document.getElementById('mobileNav')
+
+      // Toggle menu
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('hidden')
+      })
+
+      // Auto close when select link
+      const links = nav.querySelectorAll('a')
+      links.forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.add('hidden')
+        })
+      })
+
+      AOS.init()
+      </script>
+  </body>
+</html>
