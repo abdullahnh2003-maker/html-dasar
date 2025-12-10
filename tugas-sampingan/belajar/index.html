@@ -9,13 +9,186 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
     <title>portofolio</title>
-
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 </head>
 <body>
     <nav class="">
-        <h1 class="">portofolio</h1>
-        <i class="fa-brands fa-whatsapp text-green-500 text-3xl"></i>
-
+        <h1 align="center">portofolio</h1>
+        
+        <a href="../../tugas-portofolio/potofolio.html" target="_blank" rel="noopener noreferrer">cok</a>
+        <a href="http://"></a>
+        <a href="mailto:abullah53nh@gmail.com"><i class="fa-brands fa-instagram text-green-500 text-3xl"></i></a>
+        <a href="tel:+62 857 29670353"><i class="fa-brands fa-whatsapp text-green-500 text-3xl"></i></a>
     </nav>
+    <section
+  id="home"
+  class="min-h-screen flex flex-col md:flex-row items-center justify-between px-10 md:px-20 gap-16 md:gap-10"
+>
+  <!-- Text Kiri -->
+  <div class="flex-1 text-left space-y-4 order-2 md:order-1" data-aos="fade-up">
+    <h2 class="text-blue-300 text-2xl md:text-3xl font-semibold" data-aos="fade-left">
+      Hello, my name is
+    </h2>
+
+    <h1 class="font-extrabold text-4xl md:text-6xl leading-tight">
+      <span class="text-red-500">Abdullah</span> 👋
+    </h1>
+
+    <p class="text-neutral-300 text-lg max-w-md">
+      And I'm a <span class="text-blue-400 font-semibold">Programmer</span> who loves creating beautiful and modern websites.
+    </p>
+
+    <!-- Button -->
+    <div class="pt-4">
+      <a
+        href="#skills"
+        class="bg-blue-500 hover:bg-blue-600 transition text-white font-semibold py-3 px-6 rounded-xl shadow-lg shadow-blue-500/40"
+      >
+        View My Skills
+      </a>
+    </div>
+  </div>
+
+  <!-- Foto Kanan -->
+  <div class="flex-1 flex justify-center order-1 md:order-2" data-aos="fade-right">
+    <img
+      class="rounded-2xl w-64 md:w-80 shadow-[0_0_30px_10px] shadow-blue-500 hover:scale-105 transition"
+      src="./galeri/saya.jpg"
+      alt="saya"
+    />
+  </div>
+</section>
+<div
+  class="bg-gray-900 p-8 rounded-xl shadow-lg hover:scale-105 transition duration-300"
+  data-aos="fade-up"
+>
+  <img
+    class="w-24 mx-auto mb-4 hover:rotate-6 transition"
+    src="https://muhammad-hamka.vercel.app/images/html.png.png"
+    alt="html"
+  >
+  <h3 class="text-blue-400 text-xl font-bold">HTML 5</h3>
+  <p class="text-neutral-400 mt-2 text-sm">
+    I've been learning HTML for a long time and I'm confident in my skills.
+  </p>
+</div>
+<section class="min-h-screen flex flex-col md:flex-row items-center justify-between px-10 gap-14">
+
+  <!-- TEXT -->
+  <div class="order-2 md:order-1 max-w-xl"
+       data-aos="fade-right"
+       data-aos-duration="900">
+    
+    <h2 class="text-blue-300 text-3xl md:text-4xl font-bold mb-2">
+      Hello, my name is
+    </h2>
+
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+      <span class="text-red-500">Abdullah</span> 👋
+    </h1>
+
+    <p class="text-neutral-300 text-lg">
+      And I'm a <span class="text-blue-400 font-semibold">Frontend Developer</span>  
+      who loves building modern and interactive websites.
+    </p>
+
+    <button
+      class="mt-6 px-6 py-3 rounded-xl font-semibold border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-black transition duration-300 shadow-[0_0_20px_5px_rgba(59,130,246,0.3)] hover:shadow-[0_0_40px_10px_rgba(59,130,246,0.6)]"
+      data-aos="zoom-in"
+      data-aos-delay="300"
+    >
+      Contact Me
+    </button>
+  </div>
+
+  <!-- IMAGE -->
+  <div class="order-1 md:order-2"
+       data-aos="fade-left"
+       data-aos-duration="900"
+  >
+    <img
+      src="./galeri/saya.jpg"
+      alt="saya"
+      class="w-52 md:w-72 rounded-full shadow-[0_0_50px_10px] shadow-blue-500 hover:scale-110 hover:shadow-blue-400 transition duration-300 object-cover"
+    />
+  </div>
+
+</section>
+<!-- SECTION HOME -->
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<section
+  id="home"
+  class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-10 gap-20"
+>
+
+  <!-- Text -->
+  <div class="text-left space-y-4" data-aos="fade-up">
+    <h2 class="text-blue-300 text-3xl md:text-4xl font-bold">
+      Hello, my name is
+    </h2>
+
+    <!-- Typing Effect -->
+    <h1 class="font-extrabold text-5xl text-white">
+      <span class="text-red-500" id="typed-name"></span> 👋
+    </h1>
+
+    <p class="text-neutral-300 max-w-md">
+      And I'm a Frontend Developer who loves building modern websites.
+    </p>
+  </div>
+
+  <!-- Image -->
+  <div data-aos="fade-left">
+    <img
+      src="./galeri/saya.jpg"
+      alt="saya"
+      class="w-56 md:w-72 rounded-full shadow-[0_0_40px_10px] shadow-blue-500 
+             hover:scale-110 hover:shadow-red-500 transition duration-300"
+    />
+  </div>
+
+</section>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- Typing Effect Script -->
+<script>
+  const text = "Abdullah";
+  let index = 0;
+  let deleting = false;
+
+  function typeEffect() {
+    const typedName = document.getElementById("typed-name");
+
+    if (!deleting) {
+      typedName.textContent = text.slice(0, index++);
+      if (index > text.length) {
+        deleting = true;
+        setTimeout(typeEffect, 1200);
+        return;
+      }
+    } else {
+      typedName.textContent = text.slice(0, index--);
+      if (index < 0) {
+        deleting = false;
+      }
+    }
+
+    setTimeout(typeEffect, deleting ? 100 : 150);
+  }
+
+  typeEffect();
+</script>
+
 </body>
 </html>
