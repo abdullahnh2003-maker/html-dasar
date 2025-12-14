@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal Sholat Harian</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #1a5f7a 0%, #159895 100%);
+        color: #333;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      header {
+        background: linear-gradient(to right, #0c4a6e, #0891b2);
+        color: white;
+        text-align: center;
+        padding: 25px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .search-section {
+        padding: 25px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .search-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .input-group {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #0c4a6e;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #ddd;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s;
+      }
+
+      .input-group input:focus {
+        border-color: #0891b2;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.2);
+      }
+
+      .btn {
+        padding: 14px 30px;
+        background: linear-gradient(to right, #0c4a6e, #0891b2);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 14px rgba(8, 145, 178, 0.3);
+      }
+
+      .toggle-section {
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+
+      .toggle-btn {
+        background: #f0f9ff;
+        color: #0c4a6e;
+        border: 2px solid #0891b2;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .toggle-btn:hover {
+        background: #e0f2fe;
+      }
+
+      .toggle-btn.active {
+        background: #0891b2;
+        color: white;
+      }
+
+      .date-display {
+        text-align: center;
+        padding: 15px;
+        background: #f0f9ff;
+        margin: 0 25px;
+        border-radius: 12px;
+        margin-top: 15px;
+        border-left: 5px solid #0891b2;
+      }
+
+      .date-display h2 {
+        color: #0c4a6e;
+        font-size: 1.4rem;
+      }
+
+      .date-display .hijri {
+        color: #0891b2;
+        font-weight: 600;
+        margin-top: 5px;
+        font-size: 1.1rem;
+      }
+
+      .prayer-times {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 25px;
+      }
+
+      .prayer-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s;
+        border-top: 5px solid;
+      }
+
+      .prayer-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .prayer-card.fajr {
+        border-color: #4f46e5;
+      }
+
+      .prayer-card.dhuhr {
+        border-color: #0ea5e9;
+      }
+
+      .prayer-card.asr {
+        border-color: #10b981;
+      }
+
+      .prayer-card.maghrib {
+        border-color: #f59e0b;
+      }
+
+      .prayer-card.isha {
+        border-color: #8b5cf6;
+      }
+
+      .prayer-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .prayer-name {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #0c4a6e;
+      }
+
+      .prayer-time {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #0891b2;
+        margin: 10px 0;
+      }
+
+      .loading {
+        text-align: center;
+        padding: 40px;
+        font-size: 1.2rem;
+        color: #0c4a6e;
+      }
+
+      .error {
+        text-align: center;
+        padding: 40px;
+        background: #fee2e2;
+        border-radius: 12px;
+        margin: 25px;
+        color: #dc2626;
+        border-left: 5px solid #dc2626;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #6b7280;
+        font-size: 0.9rem;
+        border-top: 1px solid #eee;
+        background: #f9fafb;
+      }
+
+      @media (max-width: 768px) {
+        .prayer-times {
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+
+        .search-form {
+          flex-direction: column;
+        }
+
+        .input-group {
+          min-width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .prayer-times {
+          grid-template-columns: 1fr;
+        }
+
+        header h1 {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-mosque"></i> Jadwal Sholat Harian</h1>
+        <p>Waktu sholat berdasarkan kota dan metode perhitungan</p>
+      </header>
+
+      <section class="search-section">
+        <form id="searchForm" class="search-form">
+          <div class="input-group">
+            <label for="city"><i class="fas fa-city"></i> Kota</label>
+            <input
+              type="text"
+              id="city"
+              placeholder="Contoh: Jakarta"
+              value="Jakarta"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="country"
+              ><i class="fas fa-globe-asia"></i> Negara</label
+            >
+            <input
+              type="text"
+              id="country"
+              placeholder="Contoh: Indonesia"
+              value="Indonesia"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="method"
+              ><i class="fas fa-calculator"></i> Metode Perhitungan</label
+            >
+            <input
+              type="number"
+              id="method"
+              placeholder="Kode metode (default: 20)"
+              value="20"
+              min="1"
+              max="20"
+            />
+          </div>
+
+          <button type="submit" class="btn">
+            <i class="fas fa-search"></i> Cari Jadwal
+          </button>
+        </form>
+      </section>
+
+      <section class="toggle-section">
+        <button id="toggleDate" class="toggle-btn">
+          <i class="fas fa-calendar-day"></i> Jadwal untuk Hari Ini
+        </button>
+        <div class="date-display">
+          <h2 id="gregorianDate">-</h2>
+          <div class="hijri" id="hijriDate">-</div>
+        </div>
+      </section>
+
+      <div id="loading" class="loading" style="display: none">
+        <i class="fas fa-spinner fa-spin"></i> Memuat jadwal sholat...
+      </div>
+
+      <div id="errorContainer" class="error" style="display: none">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span id="errorMessage">Terjadi kesalahan</span>
+      </div>
+
+      <div class="prayer-times" id="prayerTimesContainer">
+        <!-- Jadwal sholat akan dimuat di sini -->
+      </div>
+
+      <footer>
+        <p>
+          Dibuat dengan
+          <i class="fas fa-heart" style="color: #dc2626"></i> menggunakan
+          Aladhan API
+        </p>
+        <p>© 2023 Jadwal Sholat Harian - Untuk Keperluan Ibadah</p>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Elemen DOM
+        const searchForm = document.getElementById('searchForm')
+        const cityInput = document.getElementById('city')
+        const countryInput = document.getElementById('country')
+        const methodInput = document.getElementById('method')
+        const toggleDateBtn = document.getElementById('toggleDate')
+        const gregorianDateElement = document.getElementById('gregorianDate')
+        const hijriDateElement = document.getElementById('hijriDate')
+        const prayerTimesContainer = document.getElementById(
+          'prayerTimesContainer'
+        )
+        const loadingElement = document.getElementById('loading')
+        const errorContainer = document.getElementById('errorContainer')
+        const errorMessageElement = document.getElementById('errorMessage')
+
+        let isToday = true
+
+        // Inisialisasi: tampilkan jadwal untuk Jakarta hari ini
+        fetchPrayerTimes('Jakarta', 'Indonesia', 20, true)
+
+        // Event listener untuk form pencarian
+        searchForm.addEventListener('submit', function (e) {
+          e.preventDefault()
+          const city = cityInput.value.trim()
+          const country = countryInput.value.trim()
+          const method = methodInput.value || 20
+
+          fetchPrayerTimes(city, country, method, isToday)
+        })
+
+        // Event listener untuk toggle tanggal
+        toggleDateBtn.addEventListener('click', function () {
+          isToday = !isToday
+
+          if (isToday) {
+            toggleDateBtn.innerHTML =
+              '<i class="fas fa-calendar-day"></i> Jadwal untuk Hari Ini'
+            toggleDateBtn.classList.remove('active')
+          } else {
+            toggleDateBtn.innerHTML =
+              '<i class="fas fa-calendar-alt"></i> Jadwal untuk Besok'
+            toggleDateBtn.classList.add('active')
+          }
+
+          // Ambil data ulang dengan tanggal yang sesuai
+          const city = cityInput.value.trim()
+          const country = countryInput.value.trim()
+          const method = methodInput.value || 20
+
+          fetchPrayerTimes(city, country, method, isToday)
+        })
+
+        // Fungsi utama untuk mengambil data jadwal sholat
+        function fetchPrayerTimes(city, country, method, today) {
+          // Tampilkan loading, sembunyikan error dan kontainer jadwal
+          loadingElement.style.display = 'block'
+          errorContainer.style.display = 'none'
+          prayerTimesContainer.innerHTML = ''
+
+          // Format tanggal untuk API
+          let dateParam = ''
+          if (!today) {
+            const tomorrow = new Date()
+            tomorrow.setDate(tomorrow.getDate() + 1)
+            const day = String(tomorrow.getDate()).padStart(2, '0')
+            const month = String(tomorrow.getMonth() + 1).padStart(2, '0')
+            const year = tomorrow.getFullYear()
+            dateParam = `&date=${day}-${month}-${year}`
+          }
+
+          // Buat URL API
+          const apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(
+            city
+          )}&country=${encodeURIComponent(
+            country
+          )}&method=${method}${dateParam}`
+
+          // Fetch data dari API
+          fetch(apiUrl)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`)
+              }
+              return response.json()
+            })
+            .then((data) => {
+              // Sembunyikan loading
+              loadingElement.style.display = 'none'
+
+              // Periksa jika data valid
+              if (data.code === 200) {
+                displayPrayerTimes(data.data)
+              } else {
+                throw new Error(
+                  data.data || 'Gagal mengambil data jadwal sholat'
+                )
+              }
+            })
+            .catch((error) => {
+              // Tampilkan error
+              loadingElement.style.display = 'none'
+              errorMessageElement.textContent = `Error: ${error.message}. Pastikan kota dan negara benar.`
+              errorContainer.style.display = 'block'
+              console.error('Error fetching prayer times:', error)
+            })
+        }
+
+        // Fungsi untuk menampilkan jadwal sholat
+        function displayPrayerTimes(data) {
+          // Tampilkan tanggal
+          const gregorianDate = data.date.gregorian.date
+          const hijriDate = data.date.hijri.date
+          const hijriDay = data.date.hijri.day
+          const hijriMonth = data.date.hijri.month.en
+          const hijriYear = data.date.hijri.year
+
+          gregorianDateElement.textContent = gregorianDate
+          hijriDateElement.textContent = `${hijriDate} (${hijriDay} ${hijriMonth} ${hijriYear} H)`
+
+          // Data waktu sholat
+          const timings = data.timings
+          const prayerData = [
+            {
+              name: 'Subuh',
+              time: timings.Fajr,
+              icon: 'fas fa-sun',
+              className: 'fajr',
+            },
+            {
+              name: 'Dzuhur',
+              time: timings.Dhuhr,
+              icon: 'fas fa-sun',
+              className: 'dhuhr',
+            },
+            {
+              name: 'Ashar',
+              time: timings.Asr,
+              icon: 'fas fa-sun',
+              className: 'asr',
+            },
+            {
+              name: 'Maghrib',
+              time: timings.Maghrib,
+              icon: 'fas fa-moon',
+              className: 'maghrib',
+            },
+            {
+              name: 'Isya',
+              time: timings.Isha,
+              icon: 'fas fa-moon',
+              className: 'isha',
+            },
+            {
+              name: 'Terbit',
+              time: timings.Sunrise,
+              icon: 'fas fa-sunrise',
+              className: 'fajr',
+            },
+          ]
+
+          // Kosongkan kontainer
+          prayerTimesContainer.innerHTML = ''
+
+          // Buat kartu untuk setiap waktu sholat
+          prayerData.forEach((prayer) => {
+            const prayerCard = document.createElement('div')
+            prayerCard.className = `prayer-card ${prayer.className}`
+
+            prayerCard.innerHTML = `
+                        <div class="prayer-icon">
+                            <i class="${prayer.icon}"></i>
+                        </div>
+                        <div class="prayer-name">${prayer.name}</div>
+                        <div class="prayer-time">${formatTime(
+                          prayer.time
+                        )}</div>
+                    `
+
+            prayerTimesContainer.appendChild(prayerCard)
+          })
+        }
+
+        // Fungsi untuk memformat waktu (menghapus teks seperti "(WIB)")
+        function formatTime(timeString) {
+          return timeString.replace(/\(.*?\)/g, '').trim()
+        }
+      })
+    </script>
+  </body>
+</html>
