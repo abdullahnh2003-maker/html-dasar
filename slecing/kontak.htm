@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8 ">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8 " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontak</title>
     <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     /> -->
     <script src="https://cdn.tailwindcss.com"></script>
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-</head>
-<body class="bg-gray-200 space-y-10">
-  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
-      
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-200 space-y-10">
+    <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
       <nav
-        class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4"
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
       >
-      <button id="burgerBtn" class="md:hidden ">
-          <svg
-            class="w-7 h-7 text-blue-300 hover:scale-105"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
+        <div class="flex items-center gap-4">
+          <button id="burgerBtn" class="md:hidden">
+            <svg
+              class="w-7 h-7 text-amber-600"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
 
-      <!-- MENU MOBILE -->
-      <div id="mobileNav" class="md:hidden hidden px-4 pb-4 ">
-        <a class="block py-2 hover:text-red-600 font-bold" href="index.html">Home</a>
-        <a class="block py-2 hover:text-red-600 font-bold" href="produk.html">Produk</a>
-        <a class="block py-2 hover:text-red-600 font-bold" href="tentang.html">Tentang</a>          
-        <a class="block py-2 hover:text-red-600 font-bold" href="kontak.htm">Kontak</a>     
-      </div>
-        <a href="index.html"><img
-          class="w-28"
-          src="https://www.coca-cola.com/content/dam/onexp/global/icons/Coke-company-logo-black.svg"
-          alt="logo coca-cola"
-        /></a>
-        
+          <a href="index.html">
+            <img
+              class="w-28"
+              src="https://www.coca-cola.com/content/dam/onexp/global/icons/Coke-company-logo-black.svg"
+              alt="logo coca-cola"
+            />
+          </a>
+        </div>
 
-        <!-- Menu -->
         <ul class="hidden md:flex items-center gap-10 text-lg">
           <li>
-            <a class="hover:text-red-600 font-bold transition duration-500" href="index.html">Home</a>
+            <a class="hover:text-red-600 font-bold transition" href="index.html"
+              >Home</a
+            >
           </li>
           <li>
-            <a class="hover:text-red-600 font-bold transition duration-500" href="produk.html">Produk</a>
+            <a
+              class="hover:text-red-600 font-bold transition"
+              href="produk.html"
+              >Produk</a
+            >
           </li>
           <li>
-            <a class="hover:text-red-600 font-bold transition duration-500" href="tentang.html">Tentang</a>
+            <a
+              class="hover:text-red-600 font-bold transition"
+              href="tentang.html"
+              >Tentang</a
+            >
           </li>
           <li>
-            <a class="hover:text-red-600 font-bold transition duration-500" href="kontak.htm">Kontak</a>
+            <a class="hover:text-red-600 font-bold transition" href="kontak.htm"
+              >Kontak</a
+            >
           </li>
         </ul>
 
-        <!-- Button + logo kanan -->
-        <div class="flex items-center gap-5">
+        <div class="hidden md:flex items-center gap-5">
           <a
-            class="bg-amber-600 text-white px-5 py-2 rounded-full hover:bg-amber-800 transition duration-500"
+            class="bg-amber-600 text-white px-5 py-2 rounded-full hover:bg-amber-800 transition"
             href="https://alfagift.id/find/nutriboost"
           >
             Belanja
@@ -78,185 +82,290 @@
           <img
             class="w-14"
             src="https://www.coca-cola.com/content/dam/onexp/id/home-image/brands/nutriboost/nutriboost-resize/final-svg/Nutriboost-180x180-01.svg"
-            alt="gambar nutriboost"
+            alt="nutriboost"
           />
         </div>
-        
       </nav>
-    </header><br><br><br>
 
-  <div class="text-center space-y-5 mx-7" data-aos="fade-right">
-     <h1 class="text-5xl font-bold">Hubungi Kami</h1>
-     <p class="text-xl text-gray-600">Kami siap menjawab pertanyaan Anda. Hubungi kami melalui form di bawah.</p>
-  </div>
-   <section class="p-6 flex justify-center" data-aos="zoom-in">
-  <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
-    <form action="index.html" method="get" class="space-y-5">
-
-      <!-- Nama Lengkap -->
-      <div class="flex flex-col">
-        <label class="font-semibold mb-1" for="nama">Nama Lengkap:</label>
-        <input
-          type="text"
-          name="namaLengkap"
-          id="nama"
-          placeholder="Nama lengkap"
-          class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-      </div>
-
-      <!-- Email -->
-      <div class="flex flex-col">
-        <label class="font-semibold mb-1" for="alamat_email">Alamat Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="alamat_email"
-          placeholder="nama@gmail.com"
-          class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-      </div>
-
-      <!-- Password -->
-      <div class="flex flex-col">
-        <label class="font-semibold mb-1" for="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Password"
-          class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-      </div>
-
-      <div class="flex flex-col">
-          <label class="font-semibold mb-1" for="note">Pesan/rekomendasi/Saran Lengkap:</label>
-          <textarea
-            name="note"
-            id="note"
-            placeholder="Tulis Pesan Dan Saran Anda Secara detail di sini..."
-            class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          ></textarea>
-      </div>
-
-      <!-- Tombol -->
-      <div class="flex gap-4 pt-3">
-        <button
-          type="reset"
-          class="flex-1 bg-gray-300 px-4 py-2 rounded-lg hover:bg-gray-400 transition duration-200"
+      <div id="mobileNav" class="hidden md:hidden bg-white px-6 pb-6 shadow-lg">
+        <a class="block py-3 font-bold hover:text-red-600" href="index.html"
+          >Home</a
         >
-          Batal
-        </button>
-
-        <button
-          type="submit"
-          class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+        <a class="block py-3 font-bold hover:text-red-600" href="produk.html"
+          >Produk</a
         >
-          Simpan
-        </button>
+        <a class="block py-3 font-bold hover:text-red-600" href="tentang.html"
+          >Tentang</a
+        >
+        <a class="block py-3 font-bold hover:text-red-600" href="kontak.htm"
+          >Kontak</a
+        >
+
+        <a
+          class="mt-4 inline-block bg-amber-600 text-white px-6 py-2 rounded-full"
+          href="https://alfagift.id/find/nutriboost"
+        >
+          Belanja
+        </a>
       </div>
+    </header>
+    <br /><br /><br />
 
-    </form>
-  </div>
-</section>
-
- <footer class="bg-black p-10">
-    <div class=" hidden items-center justify-between  md:flex gap-10 text-lg">
-      <img class="" src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg" alt="cola">
-      <a class="flex items-center gap-4 bg-black border-2 border-white text-white px-5 py-2 rounded-full hover:bg-gray-800 transition duration-500" href="https://www.coca-cola.com/country-selector">
-        <!-- pakai chat-gpt : sari sini-->
-        <i class="fa-solid fa-location-dot text-white text-3xl"></i>
-
-        <!-- sampai sini -->
-        Indonesia</a>
+    <div class="text-center space-y-5 mx-7" data-aos="fade-right">
+      <h1 class="text-5xl font-bold">Hubungi Kami</h1>
+      <p class="text-xl text-gray-600">
+        Kami siap menjawab pertanyaan Anda. Hubungi kami melalui form di bawah.
+      </p>
     </div>
-    <br><hr><br>
-    <div class="lg:flex gap-40 sm:flex-col lg:flex-row">
-      <div class="flex flex-col space-y-2">
-        <h1 class="text-gray-400  text-xl">Menu</h1>
-        <a class="text-white leading-10 font-bold" href="index.html">Home</a>
-        <a class="text-white leading-10 font-bold" href="produk.html">Produk</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/company">Tentang Kami</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/company">Kontak</a>
+    <section class="p-6 flex justify-center" data-aos="zoom-in">
+      <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+        <form action="index.html" method="get" class="space-y-5">
+          <div class="flex flex-col">
+            <label class="font-semibold mb-1" for="nama">Nama Lengkap:</label>
+            <input
+              type="text"
+              name="namaLengkap"
+              id="nama"
+              placeholder="Nama lengkap"
+              class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label class="font-semibold mb-1" for="alamat_email"
+              >Alamat Email:</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="alamat_email"
+              placeholder="nama@gmail.com"
+              class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label class="font-semibold mb-1" for="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label class="font-semibold mb-1" for="note"
+              >Pesan/rekomendasi/Saran Lengkap:</label
+            >
+            <textarea
+              name="note"
+              id="note"
+              placeholder="Tulis Pesan Dan Saran Anda Secara detail di sini..."
+              class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+          </div>
+
+          <div class="flex gap-4 pt-3">
+            <button
+              type="reset"
+              class="flex-1 bg-gray-300 px-4 py-2 rounded-lg hover:bg-gray-400 transition duration-200"
+            >
+              Batal
+            </button>
+
+            <button
+              type="submit"
+              class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+            >
+              Simpan
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="flex flex-col space-y-2">
-        <h1 class="text-gray-400  text-xl">tentang kami</h1>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/company">Perusahaan Kami</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/media-center">Pusat Media</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/company/history">Sejarah</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-colacompany.com/careers">Karir</a>
+    </section>
+
+    <footer class="bg-black p-10">
+      <div class="hidden items-center justify-between md:flex gap-10 text-lg">
+        <img
+          class=""
+          src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg"
+          alt="cola"
+        />
+        <a
+          class="flex items-center gap-4 bg-black border-2 border-white text-white px-5 py-2 rounded-full hover:bg-gray-800 transition duration-500"
+          href="https://www.coca-cola.com/country-selector"
+        >
+          <i class="fa-solid fa-location-dot text-white text-3xl"></i>
+
+          Indonesia</a
+        >
       </div>
-      <div class="flex flex-col space-y-2">
-        <h1 class="text-gray-400  text-xl">Perlu bantuan?</h1>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/about-us/faq">FAQ</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/sitemap">Sitemap</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/about-us/contact-us">Contact Us</a>
+      <br />
+      <hr />
+      <br />
+      <div class="lg:flex gap-40 sm:flex-col lg:flex-row">
+        <div class="flex flex-col space-y-2">
+          <h1 class="text-gray-400 text-xl">Menu</h1>
+          <a class="text-white leading-10 font-bold" href="index.html">Home</a>
+          <a class="text-white leading-10 font-bold" href="produk.html"
+            >Produk</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-colacompany.com/company"
+            >Tentang Kami</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-colacompany.com/company"
+            >Kontak</a
+          >
+        </div>
+        <div class="flex flex-col space-y-2">
+          <h1 class="text-gray-400 text-xl">tentang kami</h1>
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-colacompany.com/company"
+            >Perusahaan Kami</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/media-center"
+            >Pusat Media</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-colacompany.com/company/history"
+            >Sejarah</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-colacompany.com/careers"
+            >Karir</a
+          >
+        </div>
+        <div class="flex flex-col space-y-2">
+          <h1 class="text-gray-400 text-xl">Perlu bantuan?</h1>
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/about-us/faq"
+            >FAQ</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/sitemap"
+            >Sitemap</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/about-us/contact-us"
+            >Contact Us</a
+          >
+        </div>
+        <div class="flex flex-col space-y-2">
+          <h1 class="text-gray-400 text-xl">Legal</h1>
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/legal/privacy-policy"
+            >Kebijakan privasi</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/legal/terms-of-use"
+            >Ketentuan Penggunaan</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/legal/cookie-policy"
+            >Kebijakan Cookie</a
+          >
+          <a
+            class="text-white font-bold"
+            href="https://www.coca-colacompany.com/policies-and-practices/responsible-marketing-policy"
+            >Kebijakan Pemasaran yang Bertanggung Jawab</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/legal/terms-and-conditions"
+            >Syarat & Ketentuan</a
+          >
+          <a
+            class="text-white leading-10 font-bold"
+            href="https://www.coca-cola.com/id/id/legal/terms-and-conditions"
+            >Pengaturan Cookie</a
+          >
+        </div>
+        <div></div>
       </div>
-      <div class="flex flex-col space-y-2">
-        <h1 class="text-gray-400 text-xl">Legal</h1>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/privacy-policy">Kebijakan privasi</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/terms-of-use">Ketentuan Penggunaan</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/cookie-policy">Kebijakan Cookie</a>
-        <a class="text-white  font-bold" href="https://www.coca-colacompany.com/policies-and-practices/responsible-marketing-policy">Kebijakan Pemasaran yang Bertanggung Jawab</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/terms-and-conditions">Syarat & Ketentuan</a>
-        <a class="text-white leading-10 font-bold" href="https://www.coca-cola.com/id/id/legal/terms-and-conditions">Pengaturan Cookie</a>
+      <br />
+      <hr />
+      <br />
+      <div class="items-center justify-between lg:flex sm:flex-row">
+        <div class="flex items-center gap-5">
+          <a
+            href="https://twitter.com/@nutriboostid"
+            class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition"
+          >
+            <i
+              class="fa-brands fa-x-twitter text-white hover:text-black text-3xl"
+            ></i>
+          </a>
+
+          <a
+            href="https://instagram.com/nutriboostid"
+            class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition"
+          >
+            <i
+              class="fa-brands fa-instagram text-white hover:text-black text-3xl"
+            ></i>
+          </a>
+
+          <a
+            href="https://youtube.com/user/nutriboostindonesia"
+            class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition"
+          >
+            <i
+              class="fa-brands fa-youtube text-white hover:text-black text-3xl"
+            ></i>
+          </a>
+
+          <a
+            href="https://facebook.com/nutriboostid"
+            class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition"
+          >
+            <i
+              class="fa-brands fa-facebook text-white hover:text-black text-3xl"
+            ></i>
+          </a>
+        </div>
+        <div class="text-end">
+          <p class="text-white">
+            &COPY; 2025 The Coca‑Cola Company. All rights reserved.
+          </p>
+        </div>
       </div>
-    <div>
-        
-    </div>
-    
-    </div>
-    <br><hr><br>
-    <div class="items-center justify-between lg:flex sm:flex-row">
-     <div class="flex items-center gap-5">
-
-      <!-- X -->
-      <a href="https://twitter.com/@nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
-        <i class="fa-brands fa-x-twitter text-white hover:text-black text-3xl"></i>
-
-      </a>
-
-      <!-- Instagram -->
-      <a href="https://instagram.com/nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
-        <i class="fa-brands fa-instagram text-white hover:text-black text-3xl"></i>
-
-      </a>
-
-      <!-- YouTube -->
-      <a href="https://youtube.com/user/nutriboostindonesia" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
-<i class="fa-brands fa-youtube text-white hover:text-black text-3xl"></i>
-      </a>
-
-      <!-- Facebook -->
-      <a href="https://facebook.com/nutriboostid" class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition">
-        <i class=" fa-brands fa-facebook  text-white hover:text-black text-3xl"></i>
-
-      </a>
-
-    </div>
-    <div class="text-end">
-    <p class="text-white">&COPY; 2025 The Coca‑Cola Company. All rights reserved.</p>
-    </div>
-    </div>
-    <br><br><br>
-  </footer>
-<script>const btn = document.getElementById('burgerBtn')
-      const nav = document.getElementById('mobileNav')
+      <br /><br /><br />
+    </footer>
+    <script>
+      const btn = document.getElementById("burgerBtn");
+      const nav = document.getElementById("mobileNav");
 
       // Toggle menu
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('hidden')
-      })
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("hidden");
+      });
 
       // Auto close when select link
-      const links = nav.querySelectorAll('a')
+      const links = nav.querySelectorAll("a");
       links.forEach((link) => {
-        link.addEventListener('click', () => {
-          nav.classList.add('hidden')
-        })
-      })
+        link.addEventListener("click", () => {
+          nav.classList.add("hidden");
+        });
+      });
 
-      AOS.init()
-      </script>
-</body>
+      AOS.init();
+    </script>
+  </body>
 </html>
