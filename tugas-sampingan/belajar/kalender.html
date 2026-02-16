@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender & Jadwal Sholat Dinamis</title>
+    <style>
+        :root {
+            --primary: #1b5e20;
+            --accent: #4caf50;
+            --bg: #e8f5e9;
+        }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
+        
+        h2 { color: var(--primary); text-align: center; margin-bottom: 20px; }
+
+        /* Style Input & Pengaturan */
+        .settings { background: #f9f9f9; padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #eee; }
+        .form-group { margin-bottom: 10px; }
+        label { display: block; font-size: 0.8em; font-weight: bold; color: #555; margin-bottom: 5px; }
+        input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        button:hover { background: var(--accent); }
+
+        /* Display Tanggal */
+        .date-display { text-align: center; margin: 20px 0; border-bottom: 2px dashed #eee; padding-bottom: 20px; }
+        .big-day { font-size: 3em; font-weight: bold; color: var(--primary); margin: 0; }
+        .masehi-text { font-size: 1.1em; color: #333; font-weight: 500; }
+        .hijri-text { color: var(--accent); font-size: 1.2em; font-weight: bold; margin-top: 5px; }
+
+        /* Grid Jadwal Sholat */
+        .sholat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .sholat-item { background: #fff; padding: 12px; border-radius: 10px; text-align: center; border: 1px solid #e0e0e0; transition: 0.3s; }
+        .sholat-item:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .sholat-item b { display: block; color: var(--primary); font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }
+        .sholat-item span { font-size: 1.2em; font-weight: bold; }
+        
+        .loading { text-align: center; font-style: italic; color: #888; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🕌 Kalender & Jadwal</h2>
+
+    <div class="settings">
+        <div class="form-group">
+            <label>Pilih Tanggal:</label>
+            <input type="date" id="inputDate">
+        </div>
+        <div class="form-group">
+            <label>Kota (Contoh: Jakarta / Makkah):</label>
+            <input type="text" id="inputCity" placeholder="Masukkan nama kota...">
+        </div>
+        <button onclick="updateDisplay()">Cek Jadwal & Tanggal</button>
+    </div>
+
+    <div id="loadingText" class="loading">Memperbarui data...</div>
+
+    <div id="mainContent">
+        <div class="date-display">
+            <p class="big-day" id="viewDay">--</p>
+            <div class="masehi-text" id="viewMasehi">Pilih lokasi dan tanggal</div>
+            <div class="hijri-text" id="viewHijri">---</div>
+        </div>
+
+        <div class="sholat-grid">
+            <div class="sholat-item"><b>Subuh</b> <span id="fajr">--:--</span></div>
+            <div class="sholat-item"><b>Dzuhur</b> <span id="dhuhr">--:--</span></div>
+            <div class="sholat-item"><b>Ashar</b> <span id="asr">--:--</span></div>
+            <div class="sholat-item"><b>Maghrib</b> <span id="maghrib">--:--</span></div>
+            <div class="sholat-item"><b>Isya</b> <span id="isha">--:--</span></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Set default tanggal hari ini di input
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('inputDate').value = today;
+    document.getElementById('inputCity').value = "Jakarta";
+
+    async function updateDisplay() {
+        const city = document.getElementById('inputCity').value;
+        const dateInput = document.getElementById('inputDate').value;
+        const loading = document.getElementById('loadingText');
+        const content = document.getElementById('mainContent');
+
+        if (!city) {
+            alert("Harap masukkan nama kota!");
+            return;
+        }
+
+        // Format tanggal dari YYYY-MM-DD ke DD-MM-YYYY untuk API
+        const dateParts = dateInput.split('-');
+        const formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+
+        loading.style.display = "block";
+        content.style.opacity = "0.5";
+
+        try {
+            // API call ke Aladhan
+            const url = `https://api.aladhan.com/v1/timingsByCity/${formattedDate}?city=${city}&country=id&method=11`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.code === 200) {
+                const info = data.data;
+
+                // 1. Update Tanggal Masehi
+                document.getElementById('viewDay').innerText = info.date.gregorian.day;
+                document.getElementById('viewMasehi').innerText = `${info.date.gregorian.weekday.en}, ${info.date.gregorian.date}`;
+
+                // 2. Update Tanggal Hijriyah
+                const h = info.date.hijri;
+                document.getElementById('viewHijri').innerText = `${h.day} ${h.month.en} ${h.year} H`;
+
+                // 3. Update Waktu Sholat
+                document.getElementById('fajr').innerText = info.timings.Fajr;
+                document.getElementById('dhuhr').innerText = info.timings.Dhuhr;
+                document.getElementById('asr').innerText = info.timings.Asr;
+                document.getElementById('maghrib').innerText = info.timings.Maghrib;
+                document.getElementById('isha').innerText = info.timings.Isha;
+            } else {
+                alert("Kota tidak ditemukan. Coba cek ejaan atau gunakan nama kota besar terdekat.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Gagal mengambil data. Pastikan koneksi internet aktif.");
+        } finally {
+            loading.style.display = "none";
+            content.style.opacity = "1";
+        }
+    }
+
+    // Jalankan pertama kali saat load
+    updateDisplay();
+</script>
+
+</body>
+</html>
